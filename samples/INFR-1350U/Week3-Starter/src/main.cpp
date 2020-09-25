@@ -82,53 +82,6 @@ bool initGLAD() {
 }
 
 
-GLuint shader_program;
-
-bool loadShaders() {
-	// Read Shaders from file
-	std::string vert_shader_str;
-	std::ifstream vs_stream("shaders/vertex_shader.glsl", std::ios::in);
-	if (vs_stream.is_open()) {
-		std::string Line = "";
-		while (getline(vs_stream, Line))
-			vert_shader_str += "\n" + Line;
-		vs_stream.close();
-	}
-	else {
-		printf("Could not open vertex shader!!\n");
-		return false;
-	}
-	const char* vs_str = vert_shader_str.c_str();
-
-	std::string frag_shader_str;
-	std::ifstream fs_stream("shaders/frag_shader.glsl", std::ios::in);
-	if (fs_stream.is_open()) {
-		std::string Line = "";
-		while (getline(fs_stream, Line))
-			frag_shader_str += "\n" + Line;
-		fs_stream.close();
-	}
-	else {
-		printf("Could not open fragment shader!!\n");
-		return false;
-	}
-	const char* fs_str = frag_shader_str.c_str();
-
-	GLuint vs = glCreateShader(GL_VERTEX_SHADER);
-	glShaderSource(vs, 1, &vs_str, NULL);
-	glCompileShader(vs);
-	GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fs, 1, &fs_str, NULL);
-	glCompileShader(fs);
-
-	shader_program = glCreateProgram();
-	glAttachShader(shader_program, fs);
-	glAttachShader(shader_program, vs);
-	glLinkProgram(shader_program);
-
-	return true;
-}
-
 int main() {
 	Logger::Init(); // We'll borrow the logger from the toolkit, but we need to initialize it
 
@@ -157,31 +110,29 @@ int main() {
 	};
 
 	//VBO - Vertex buffer object
-	GLuint pos_vbo = 0;
-	glGenBuffers(1, &pos_vbo);
-	glBindBuffer(GL_ARRAY_BUFFER, pos_vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
+	VertexBuffer* posVbo = new VertexBuffer();
+	posVbo->LoadData(points, 9);
 
-	GLuint color_vbo = 1;
-	glGenBuffers(1, &color_vbo);
-	glBindBuffer(GL_ARRAY_BUFFER, color_vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
+	VertexBuffer* color_vbo = new VertexBuffer();
+	color_vbo->LoadData(colors, 9);
 
-	glBindBuffer(GL_ARRAY_BUFFER, pos_vbo);
 
-	//						index, size, type, normalize?, stride, pointer
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+	VertexArrayObject* vao = new VertexArrayObject();
 
-	glBindBuffer(GL_ARRAY_BUFFER, color_vbo);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+	vao->AddVertexBuffer(posVbo, {
+	 { 0, 3, GL_FLOAT, false, 0, NULL }
+		});
 
-	glEnableVertexAttribArray(0);//pos
-	glEnableVertexAttribArray(1);//colors
+	vao->AddVertexBuffer(color_vbo, {
+	 { 1, 3, GL_FLOAT, false, 0, NULL }
+		});
 
 	// Load our shaders
 
-	if (!loadShaders())
-		return 1;
+	Shader* shader = new Shader();
+	shader->LoadShaderPartFromFile("shaders/vertex_shader.glsl", GL_VERTEX_SHADER);
+	shader->LoadShaderPartFromFile("shaders/frag_shader.glsl", GL_FRAGMENT_SHADER);
+	shader->Link();
 
 	// GL states
 	glEnable(GL_DEPTH_TEST);
@@ -202,12 +153,18 @@ int main() {
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		glUseProgram(shader_program);
+		shader->Bind();
 
+		vao->Bind();
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		glfwSwapBuffers(window);
 	}
+
+	delete shader;
+	delete vao;
+	delete posVbo;
+	delete color_vbo;
 
 	// Clean up the toolkit logger so we don't leak memory
 	Logger::Uninitialize();
