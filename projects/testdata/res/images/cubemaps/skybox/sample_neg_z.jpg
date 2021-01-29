@@ -1,0 +1,1325 @@
+./../Dialog/BackDialog.ui" line="20"/>
+        <source>StellarPhoenixVideoRepair</source>
+        <translation>Stellar Repair for Photo</translation>
+    </message>
+</context>
+<context>
+    <name>BrowseRepair</name>
+    <message>
+        <source>Buy Online</source>
+        <translation type="obsolete">Comprar en Línea</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="obsolete">Ayuda</translation>
+    </message>
+    <message>
+        <source>About Stellar Phoenix JPEG Repair</source>
+        <translation type="obsolete">Sobre Stellar Phoenix JPEG Repair</translation>
+    </message>
+    <message>
+        <source>Add Files</source>
+        <translation type="obsolete">Añadir Archivo</translation>
+    </message>
+    <message>
+        <source>Buy</source>
+        <translation type="obsolete">Comprar</translation>
+    </message>
+    <message>
+        <source>Remove Files</source>
+        <translation type="obsolete">Eliminar Archivo</translation>
+    </message>
+    <message>
+        <source>Register</source>
+        <translation type="obsolete">Registrarse</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="obsolete">Espalda</translation>
+    </message>
+    <message>
+        <source>Please stop the running process before you exit</source>
+        <translation type="obsolete">Por favor detenga el proceso antes de salir</translation>
+    </message>
+    <message>
+        <source>Exit Application!
+Do you want to exit
+Stellar Phoenix JPEG Repair?</source>
+        <translation type="obsolete">¡Salga de la aplicación! ¿Desea salir 
+Stellar Phoenix JPEG Repair?</translation>
+    </message>
+    <message>
+        <source>&amp;About Stellar Phoenix JPEG Repair</source>
+        <translation type="obsolete">&amp;Sobre Stellar Phoenix JPEG Repair</translation>
+    </message>
+    <message>
+        <source>&amp;Update Wizard...</source>
+        <translation type="obsolete">&amp;Asistente de Actualización…</translation>
+    </message>
+    <message>
+        <source>&amp;Register</source>
+        <translation type="obsolete">&amp;Registrarse</translation>
+    </message>
+    <message>
+        <source>&amp;Help Topics</source>
+        <translation type="obsolete">&amp;Temas de Ayuda</translation>
+    </message>
+    <message>
+        <source>&amp;Order Stellar Phoenix JPEG Repair</source>
+        <translation type="obsolete">&amp;Pedir Stellar Phoenix JPEG Repair</translation>
+    </message>
+    <message>
+        <source>&amp;Email to Stellar Support</source>
+        <translation type="obsolete">&amp;Enviar un correo electrónico al Soporte Técnico de Stellar</translation>
+    </message>
+    <message>
+        <source>&amp;View Support Section</source>
+        <translation type="obsolete">&amp;Ver la Sección de Ayuda</translation>
+    </message>
+    <message>
+        <source>Submit Enquiry</source>
+        <translation type="obsolete">Enviar Consulta</translation>
+    </message>
+    <message>
+        <source>&amp;View Knowledgebase Articles</source>
+        <translation type="obsolete">&amp;Artículos de la Base de Conocimiento</translation>
+    </message>
+    <message>
+        <source>&amp;Tools</source>
+        <translation type="obsolete">&amp;Herramientas</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation type="obsolete">&amp;Ayuda</translation>
+    </message>
+    <message>
+        <source>Select one or more files to open</source>
+        <translation type="obsolete">Seleccione uno o más archivos para abrir</translation>
+    </message>
+    <message>
+        <source>  File Name</source>
+        <translation type="obsolete">  Nombre del Archivo</translation>
+    </message>
+    <message>
+        <source>  Path</source>
+        <translation type="obsolete">  Ruta</translation>
+    </message>
+    <message>
+        <source> Size(KB)</source>
+        <translation type="obsolete"> Tamaño(KB)</translation>
+    </message>
+    <message>
+        <source>FileID</source>
+        <translation type="obsolete">ID del Archivo</translation>
+    </message>
+    <message>
+        <source>ParentID</source>
+        <translation type="obsolete">IDPrincipal</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation type="obsolete">Estado</translation>
+    </message>
+    <message>
+        <source>TemporaryPath</source>
+        <translation type="obsolete">Ruta Temporal</translation>
+    </message>
+    <message>
+        <source>Modified date</source>
+        <translation type="obsolete">Fecha de Modificación</translation>
+    </message>
+    <message>
+        <source>Created date</source>
+        <translation type="obsolete">Fecha de Creación</translation>
+    </message>
+    <message>
+        <source>  List of JPEG Files</source>
+        <translation type="obsolete">  Lista de Archivos JPEG</translation>
+    </message>
+    <message>
+        <source>  Status</source>
+        <translation type="obsolete">  Estado</translation>
+    </message>
+    <message>
+        <source>queued</source>
+        <translation type="obsolete">en la cola</translation>
+    </message>
+    <message>
+        <source>File name already added to list</source>
+        <translation type="obsolete">Este nombre de archivoya está agregado en la lista</translation>
+    </message>
+    <message>
+        <source>   File Name</source>
+        <translation type="obsolete">   Nombre del Archivo</translation>
+    </message>
+    <message>
+        <source> Path</source>
+        <translation type="obsolete"> Ruta</translation>
+    </message>
+    <message>
+        <source>_Repaired</source>
+        <translation type="obsolete">_Reparado</translation>
+    </message>
+    <message>
+        <source>Repairing</source>
+        <translation type="obsolete">Reparando</translation>
+    </message>
+    <message>
+        <source>Repairing file </source>
+        <translation type="obsolete">Reparando el Archivo </translation>
+    </message>
+    <message>
+        <source>of</source>
+        <translation type="obsolete">de</translation>
+    </message>
+    <message>
+        <source>Repairing File : </source>
+        <translation type="obsolete">Reparando el Archivo : </translation>
+    </message>
+    <message>
+        <source>completed</source>
+        <translation type="obsolete">completo</translation>
+    </message>
+    <message>
+        <source>invalid File</source>
+        <translation type="obsolete">Archivo Inválido</translation>
+    </message>
+    <message>
+        <source>Do you want to abort the running process?</source>
+        <translation type="obsolete">¿Desea abortar el proceso actual?</translation>
+    </message>
+    <message>
+        <source>Aborted</source>
+        <translation type="obsolete">Abortado</translation>
+    </message>
+    <message>
+        <source>Select Folder</source>
+        <translation type="obsolete">Seleccione Carpeta</translation>
+    </message>
+    <message>
+        <source>Your files have been repaired successfully!
+
+To save your files, register the application.
+
+Do you want to register now?</source>
+        <translation type="obsolete">¡Sus archivos han sido reparados con éxito!
+
+Para guardar sus archivos, regístre la aplicación.
+
+¿Desea registrarse ahora?</translation>
+    </message>
+    <message>
+        <source>Preview available for files having size less than 50 MB.</source>
+        <translation type="obsolete">Vista previa para archivos menores </translation>
+    </message>
+</context>
+<context>
+    <name>BrowseRepairDlg</name>
+    <message>
+        <source>Select one or more files to open</source>
+        <translation type="obsolete">Seleccione uno o más archivos para abrir</translation>
+    </message>
+    <message>
+        <source>  File Name</source>
+        <translation type="obsolete">  Nombre del Archivo</translation>
+    </message>
+    <message>
+        <source>  Path</source>
+        <translation type="obsolete">  Ruta</translation>
+    </message>
+    <message>
+        <source> Size(KB)</source>
+        <translation type="obsolete"> Tamaño(KB)</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="3638"/>
+        <source>Select Images</source>
+        <translation>Seleccionar imágenes</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source>FileID</source>
+        <translation>ID del Archivo</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source>ParentID</source>
+        <translation>IDPrincipal</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source>Status</source>
+        <translation>Estado</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source>TemporaryPath</source>
+        <translation>Ruta Temporal</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="493"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1558"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source> File Name</source>
+        <translation> Nombre del Archivo</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="217"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="218"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1536"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1537"/>
+        <source>More Tools</source>
+        <translation>Herramientas</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="237"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1538"/>
+        <source>Recover Data</source>
+        <translation>Recupera Datos</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="241"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1539"/>
+        <source>Monitor Drive</source>
+        <translation>Controla el disco duro</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="245"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1540"/>
+        <source>Repair Video</source>
+        <translation>Repair Video</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="249"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1541"/>
+        <source>Recover Photo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source> Size (KB)</source>
+        <translation> Tamaño(KB)</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1552"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3670"/>
+        <source> Modified Date</source>
+        <translation> Fecha de Modificación</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1552"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3670"/>
+        <source> Created Date</source>
+        <translation> Fecha de Creación</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1562"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="4019"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6082"/>
+        <source>This may take a while, depending on the number of photos and their file size. Please wait while the process is completed.</source>
+        <translation>Esto puede tardar algún tiempo, dependiendo del numero de fotos y el tamaño de los archivos. Por favor espere mientras se completa el proceso.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1564"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="4021"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6084"/>
+        <source>Repairing selected photos</source>
+        <translation>Reparando fotos seleccionadas</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4091"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="4247"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6455"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6473"/>
+        <source>Repaired</source>
+        <translation>Reparado</translation>
+    </message>
+    <message>
+        <source> Thumbnail</source>
+        <translation type="obsolete">Miniaturas</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4306"/>
+        <source>System date changed</source>
+        <translation>La fecha del sistema cambió</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="493"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1558"/>
+        <source> Type</source>
+        <translation> Tipo</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1505"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1511"/>
+        <source>Buy Now</source>
+        <translation>Comprar</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1522"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3649"/>
+        <source>Add</source>
+        <translation>Añadir</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="834"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1528"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3655"/>
+        <source>Repair</source>
+        <translation>Reparar</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="840"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1534"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="7183"/>
+        <source>Stop</source>
+        <translation>Detener</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="844"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1545"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="7187"/>
+        <source>Save Repaired Files</source>
+        <translation>Guardar Archivos Reparados</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1507"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1513"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5215"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5221"/>
+        <source>Activation</source>
+        <translation>Activación</translation>
+    </message>
+    <message>
+        <source> Size (MB)</source>
+        <translation type="obsolete"> Tamaño(KB)</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1547"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1548"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1553"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1559"/>
+        <source>Language</source>
+        <translation>Idiomas</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1565"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5251"/>
+        <source>Are you sure you want to exit?</source>
+        <translation>¿Esta seguro de que quiere salir?</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1810"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1856"/>
+        <source>Languages</source>
+        <translation>Idiomas</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1815"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1862"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1816"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1863"/>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1817"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1864"/>
+        <source>French</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1818"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1865"/>
+        <source>Italian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1819"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1866"/>
+        <source>Spanish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4435"/>
+        <source>Advance Repair
+
+Use this option to repair severely damaged HEIC image. 
+Click Next to add a &apos; sample HEIC image</source>
+        <translation>Reparación avanzada
+
+Utilice esta opción para reparar una imagen HEIC gravemente dañada. Haga clic en Siguiente para agregar una ‘imagen HEIC de muestra</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4435"/>
+        <source> of the same format.The sample and the damaged HEIC remain unchanged during repair process.</source>
+        <translation> del mismo formato.La muestra y el HEIC dañado permanecen inalterados durante el proceso de reparación.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="5213"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5219"/>
+        <source>Buy</source>
+        <translation>Comprar</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="6136"/>
+        <source>Already added files</source>
+        <translation>Archivos ya añadidos</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="6496"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6516"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6534"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6553"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6557"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6599"/>
+        <source>Extracted</source>
+        <translation>Extraído</translation>
+    </message>
+    <message>
+        <source> Advance repair</source>
+        <translation type="obsolete"> Reparación avanzada</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1567"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6821"/>
+        <source>Repair process completed.
+
+Thumbnails are listed as &apos;filename_Tx&apos; if available.
+Thumbnails are small sized images of large JPEGs.</source>
+        <translation>&quot;Proceso de reparación completado.
+Miniaturas de todas las imágenes enumeradas como &quot;filename_Tx&quot; si están disponibles.
+Las miniaturas son imágenes de pequeño tamaño que se corresponden a JPEG grandes.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1571"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6955"/>
+        <source>Click on the &apos;Save Repaired Files&apos; to save all your repaired photos. Click the file to preview it. </source>
+        <translatorcomment>Haga clic en &quot;Guardar archivos reparados&quot; para guardar sus fotografías reparadas. Haga clic en el archivo para previsualizarlo.</translatorcomment>
+        <translation>Haga click en guardar archivos reparados para guardar todos sus fotos reparados. Haga clic en el archivo para previsualizarlo.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1572"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6956"/>
+        <source>Repair process completed.</source>
+        <translation>Proceso de reparación completado.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4404"/>
+        <source>Advance Repair
+
+Use this option to repair severely damaged JPEG. 
+Click Next to add a &apos;sample JPEG&apos; of the same format,
+shot using the same device.The sample and the damaged JPEGs remain unchanged during repair process.</source>
+        <translatorcomment>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Calibri Light,sans-serif&apos;; font-weight:600;&quot;&gt;Reparación Avanzada&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Calibri Light,sans-serif&apos;;&quot;&gt;Utilice esta opción para reparar JPEG severamente dañados. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Calibri Light,sans-serif&apos;;&quot;&gt;Haga Click en “Siguiente” para añadir un JPEG de prueba” del mismo formato y toma usando la misma aplicación.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;Calibri Light,sans-serif&apos;; font-size:9pt;&quot;&gt;El foto de prueba y el JPEGs dañado permanecen sin cambios durante el proceso de reparación.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translatorcomment>
+        <translation>
+Reparación Avanzada
+
+Utilice esta opción para reparar JPEG severamente dañados. 
+Haga Click en “Siguiente” para añadir un JPEG de prueba” del mismo formato y toma usando la misma aplicación.
+El foto de prueba y el JPEGs dañado permanecen sin cambios durante el proceso de reparación.
+</translation>
+    </message>
+    <message>
+        <source> Extracted</source>
+        <translation type="obsolete">Extraído</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="6790"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="7042"/>
+        <source>Advance Repair</source>
+        <translation>Reparación avanzada</translation>
+    </message>
+    <message>
+        <source> Aborted</source>
+        <translation type="obsolete">Abortado</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7939"/>
+        <source>Stellar Repair for Photo</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Modified date</source>
+        <translation type="obsolete">Fecha de Modificación</translation>
+    </message>
+    <message>
+        <source>Created date</source>
+        <translation type="obsolete">Fecha de Creación</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4307"/>
+        <source>System date changed. Set to current date to run the software.</source>
+        <translation>La fecha del sistema cambió. Establezca la fecha actual para ejecutar el programa.</translation>
+    </message>
+    <message>
+        <source>  List of JPEG Files</source>
+        <translation type="obsolete">  Lista de Archivos JPEG</translation>
+    </message>
+    <message>
+        <source>Please stop the running process before you exit.</source>
+        <translation type="obsolete">Por favor detenga el proceso antes de salir.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="6112"/>
+        <source>File name already added to list.</source>
+        <translation>Este nombre de archivoya está agregado en la lista.</translation>
+    </message>
+    <message>
+        <source>Stellar Phoenix JPEG Repair lists all extractable
+thumbnails as &apos;filename_Tx&apos;.Thumbnails are
+small sized images of large JPEG files.
+These are listed for all files added to
+the repair list, if available.</source>
+        <translation type="obsolete">Stellar Phoenix JPEG Repair enumera todas las miniaturas extraíbles como “filename_Tx”. Miniaturas son imágenes de pequeño tamaño o archivos voluminosos JPEG. Estas están enumeradas para todos los archivos agregados a la lista de reparación, si disponible.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7795"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="7805"/>
+        <source>You have </source>
+        <translation>Le quedan </translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7795"/>
+        <source> days left in your subscription.Renew Subscription.</source>
+        <translation> días de prueba. Renueve su suscripción.</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7805"/>
+        <source> days left in your subscription.</source>
+        <translation> días de prueba.</translation>
+    </message>
+    <message>
+        <source>Stellar Phoenix JPEG Repair</source>
+        <translation type="obsolete">Stellar Phoenix JPEG Repair</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7939"/>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <source>  Status</source>
+        <translation type="obsolete">  Estado</translation>
+    </message>
+    <message>
+        <source>queued</source>
+        <translation type="obsolete">en la cola</translation>
+    </message>
+    <message>
+        <source>  Type</source>
+        <translation type="obsolete">Tipo</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="493"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1558"/>
+        <source> Resolution</source>
+        <translation> Resolución</translation>
+    </message>
+    <message>
+        <source>Original File</source>
+        <translation type="obsolete">Archivo original</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1504"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1510"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5212"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5218"/>
+        <source>About</source>
+        <translation>Sobre</translation>
+    </message>
+    <message>
+        <source>Buy Online</source>
+        <translation type="obsolete">Comprar en Línea</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1506"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1512"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5214"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5220"/>
+        <source>Help</source>
+        <translation>Ayuda</translation>
+    </message>
+    <message>
+        <source>Register</source>
+        <translation type="obsolete">Registrarse</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1509"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="1514"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5216"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5222"/>
+        <source>Update</source>
+        <translation>Actualizar</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1515"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="5223"/>
+        <source>Back</source>
+        <translation>Atrás</translation>
+    </message>
+    <message>
+        <source>Please stop the running process before you exit</source>
+        <translation type="obsolete">Por favor detenga el proceso antes de salir</translation>
+    </message>
+    <message>
+        <source>Exit Application!
+Do you want to exit
+Stellar Phoenix JPEG Repair?</source>
+        <translation type="obsolete">¡Salga de la aplicación! ¿Desea salir 
+Stellar Phoenix JPEG Repair?</translation>
+    </message>
+    <message>
+        <source>   File Name</source>
+        <translation type="obsolete">   Nombre del Archivo</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="1551"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="3669"/>
+        <source> Path</source>
+        <translation> Dirección</translation>
+    </message>
+    <message>
+        <source>File name already added to list</source>
+        <translation type="obsolete">Este nombre de archivoya está agregado en la lista</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4238"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6435"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6520"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6541"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6568"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6572"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6606"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6613"/>
+        <source>Thumbnail</source>
+        <translation>Miniaturas</translation>
+    </message>
+    <message>
+        <source>Repairing</source>
+        <translation type="obsolete">Reparando</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4175"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6273"/>
+        <source>Repairing file </source>
+        <translation>Reparando el Archivo </translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4175"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6273"/>
+        <source>of</source>
+        <translation>de</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="4173"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="6271"/>
+        <source>Repairing File : </source>
+        <translation>Reparando el Archivo : </translation>
+    </message>
+    <message>
+        <source>completed</source>
+        <translation type="obsolete">completo</translation>
+    </message>
+    <message>
+        <source>invalid File</source>
+        <translation type="obsolete">Archivo Inválido</translation>
+    </message>
+    <message>
+        <source>Stellar Phoenix JPEG Repair lists all extractable
+thumbnails as &apos;filename_Tx&apos;.Thumbnails are
+small sized images of large JPEG files.
+These are listed for all files added to
+the repair list, if available</source>
+        <translation type="obsolete">Stellar Phoenix JPEG Repair enumera todas las miniaturas extraíbles como “filename_Tx”. Miniaturas son imágenes de pequeño tamaño o archivos voluminosos JPEG. Estas están enumeradas para todos los archivos agregados a la lista de reparación, si disponible</translation>
+    </message>
+    <message>
+        <source>Do you want to abort the running process?</source>
+        <translation type="obsolete">¿Desea abortar el proceso actual?</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7091"/>
+        <source>Aborted</source>
+        <translation>Abortado</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="7396"/>
+        <source>Select Folder</source>
+        <translation>Seleccione Carpeta</translation>
+    </message>
+    <message>
+        <source>Your files have been repaired successfully!
+
+To save your files, register the application.</source>
+        <translation type="obsolete">¡Sus archivos han sido reparados con éxito!
+
+Para guardar sus archivos, regístre la aplicación.</translation>
+    </message>
+    <message>
+        <source>Do you want to register now?</source>
+        <translation type="obsolete">¿Desea registrarse ahora?</translation>
+    </message>
+</context>
+<context>
+    <name>BrowseRepairObj</name>
+    <message>
+        <source>Click on &quot;Add File&quot; to add corrupt JPEG files for reapir.You can also simply &quot;Drag &amp; Drop&quot; them in space above.</source>
+        <translation type="obsolete">Haga clic en &quot;Añadir Archivo&quot; para añadir los archivos dañados para Reparar. Puede simplemente &quot;Arrastrar y Soltar&quot; los archivos en el espacio situado más arriba.</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation type="obsolete">Seleccionar Todo</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:20pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:400;&quot;&gt;Repairing Selected JPEG files&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:20pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:400;&quot;&gt;Reparando los Archivos JPEG Seleccionados&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>BurningDialog</name>
+    <message>
+        <source>Disc Image Burning</source>
+        <translation type="obsolete">Abbild wird gebrannt</translation>
+    </message>
+    <message>
+        <source>Burning Image :</source>
+        <translation type="obsolete">Brennen von Abbild :</translation>
+    </message>
+    <message>
+        <source>Progress :</source>
+        <translation type="obsolete">Fortschritt :</translation>
+    </message>
+    <message>
+        <source>Abort</source>
+        <translation type="obsolete">Abbrechen</translation>
+    </message>
+</context>
+<context>
+    <name>BurningMessageDialog</name>
+    <message>
+        <source>Burn Disc</source>
+        <translation type="obsolete">CD brennen</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Burn Disc in Drive:&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; PIONEER DVD-RW DVR-117D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Brennen auf Festplatte:&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; PIONEER DVD-RW DVR-117D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Waiting for a disc to be inserted...</source>
+        <translation type="obsolete">DVD einlegen...</translation>
+    </message>
+    <message>
+        <source>Burn</source>
+        <translation type="obsolete">Brennen</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="obsolete">Abbrechen</translation>
+    </message>
+</context>
+<context>
+    <name>CheckUpdate</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="obsolete">Dialog</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Checking For Update ...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Comprobar Si Hay Actualizaciones ...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/CheckUpdate.ui" line="26"/>
+        <source>Stellar Repair for Photo </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/CheckUpdate.ui" line="57"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Arial&apos;; font-size:13pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Checking For Update ...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Buscando actualizaciones ...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>CloseApplicationDlg</name>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="9728"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="9848"/>
+        <source>Exit</source>
+        <translation>Salir</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="9772"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="9892"/>
+        <source>Yes</source>
+        <translation>Sí</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="9775"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="9895"/>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
+        <source>YES</source>
+        <translation type="obsolete">Sí</translation>
+    </message>
+    <message>
+        <location filename="../../BrowseRepairDlg.cpp" line="9778"/>
+        <location filename="../../BrowseRepairDlg.cpp" line="9898"/>
+        <source>Are you sure you want to exit?</source>
+        <translation>¿Confirma que desea salir del programa?</translation>
+    </message>
+</context>
+<context>
+    <name>CloseDlg</name>
+    <message>
+        <source>StellarPhoenixVideoRepair</source>
+        <translation type="obsolete">Stellar Repair for Photo</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/CloseDialog.ui" line="20"/>
+        <source>StellarRepairforPhoto</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CreateBootableAccept</name>
+    <message>
+        <source>Create Bootable</source>
+        <translation type="obsolete">Bootfähige</translation>
+    </message>
+    <message>
+        <source>Continue</source>
+        <translation type="obsolete">Fortfahren</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="obsolete">Abbrechen</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Create Bootable DVD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Bootfähige DVD erstellen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>A Bootable DVD needs to be created to Add, Delete, Hide or
+Resize partitions of Boot drive. Once bootable DVD is ready, 
+reboot your system using Boot DVD to utilize feature of Stellar 
+Volume Repair</source>
+        <translation type="obsolete">Eine Boot-DVD  muss erstellt  werden , wenn  Partitionen zum 
+Bootlaufwerk hinzugefügt , dort  gelöscht , ausgeblendet  oder
+in der Größe geändert werden sollen. Erstellen Sie die Boot-DVD,
+starten Sie Ihr System von der Boot-DVD neu und verwenden Sie 
+die Funktionen von Stellar Volume Repair</translation>
+    </message>
+    <message>
+        <source>A Bootable DVD needs to be created to Add, Delete, Hide or
+Resize partitions of Boot drive. Once bootable DVD is ready, 
+reboot your system using Boot DVD to utilize feature of Stellar 
+Partition Manager</source>
+        <translation type="obsolete">Eine Boot-DVD  muss erstellt  werden , wenn  Partitionen zum 
+Bootlaufwerk hinzugefügt , dort  gelöscht , ausgeblendet  oder
+in der Größe geändert werden sollen. Erstellen Sie die Boot-DVD,
+starten Sie Ihr System von der Boot-DVD neu und verwenden Sie die Funktionen von Volume Repair</translation>
+    </message>
+</context>
+<context>
+    <name>CreateBootableWidget</name>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Create Bootable DVD&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;This boot disc will work on all the computers having configuration similar to the system on which it has been created.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;This option first creates and saves disc image in your computer at specified location.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Ensure to have 5 GB of free space in destination drive required for creating boot disc image.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Bootfähige DVD erstellen&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Diese BOOT-DVD funktioniert auf allen Computern, die ähnlich konfiguriert sind wie das System, mit dem Sie erstellt wurde.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Mit dieser Funktion wird das DVD-Abbild erstellt und am vorgegebenen Ort auf dem Computer gespeichert.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Achten Sie darauf, dass auf dem Ziellaufwerk mindestens 5 GB freier Festplattenspeicher zur Verfügung stehen, damit das Boot-DVD-Abbild erstellt werden kann.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="obsolete">Schließen</translation>
+    </message>
+    <message>
+        <source>Burn DVD</source>
+        <translation type="obsolete">DVD brennen</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Create Bootable DMG&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;This option creates a boot disc image and saves it at specified location in your system. You can then restore this disc image on an external drive to boot your system.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;You need at least 8 GB free space in external drive to save boot disc image.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Note&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: Restoring disc image will format your external drive.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Erstelle bootfähige DMG&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Diese Option erstellt ein Boot Festplattenimage und speichert dieses an einem bestimmten Ort auf Ihrem System. Sie können dieses Festplattenimage auf ein externes Laufwerk speichern, um Ihr System hochzufahren.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Sie benötigen mindestens 8 GB freien Speicher auf dem externen Laufwerk, um das Boot Festplattenimage zu speichern.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Note&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;: Die Wiederherstellung des Festplattenimage wird Ihr externes Laufwerk formatieren.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation type="obsolete">Stopp</translation>
+    </message>
+    <message>
+        <source>Aborting please wait...</source>
+        <translation type="obsolete">Abbruch, bitte warten...</translation>
+    </message>
+    <message>
+        <source>Create Image</source>
+        <translation type="obsolete">Abbild erstellen</translation>
+    </message>
+</context>
+<context>
+    <name>DVDBurnDialog</name>
+    <message>
+        <source>Process cannot be resumed from the current stage.</source>
+        <translation type="obsolete">Vorgang kann vom aktuellen Punkt aus nicht fortgesetzt werden.</translation>
+    </message>
+    <message>
+        <source>Do you want to abort current process?</source>
+        <translation type="obsolete">Möchten Sie den laufenden Vorgang abbrechen?</translation>
+    </message>
+</context>
+<context>
+    <name>DetailsDlg</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="obsolete">Dialog</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:15pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:15pt; color:#ffffff;&quot;&gt;Volume Details&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:15pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:15pt; color:#ffffff;&quot;&gt;Laufwerksdetails&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>Dialog</name>
+    <message>
+        <location filename="../../Dialog/FolderOverWrite.ui" line="23"/>
+        <source>Stellar Phoenix Video Repair</source>
+        <translation>Stellar Repair for Photo</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/FolderOverWrite.ui" line="139"/>
+        <source>Folder Name : </source>
+        <translation>Nombre de la Carpeta : </translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/FolderOverWrite.ui" line="206"/>
+        <source>Rename to : </source>
+        <translation>Renombrar para : </translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/FolderOverWrite.ui" line="228"/>
+        <source>Rename</source>
+        <translation>Renombrar</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/FolderOverWrite.ui" line="250"/>
+        <source>Overwrite</source>
+        <translation>Sobrescribir</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/FolderOverWrite.ui" line="161"/>
+        <source>Cancel</source>
+        <translation>Cancelar</translation>
+    </message>
+</context>
+<context>
+    <name>DownloadUpdate</name>
+    <message>
+        <source>Software Update</source>
+        <translation type="obsolete">Software-Update</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/DownloadUpdate.ui" line="93"/>
+        <source>Update</source>
+        <translation>Actualizar</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/DownloadUpdate.ui" line="227"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Downloading under progress...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Descarga en curso…&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/DownloadUpdate.ui" line="249"/>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:13pt; font-weight:400; font-style:normal; text-decoration:none;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Downloading Files&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal; text-decoration:none;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Descargando archivos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../Dialog/DownloadUpdate.ui" line="286"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;Update of Stellar Repair for Photo  downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;Click on OK and restart &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;Stellar Repair for Photo &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt; to run updated &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;Stellar Repair for Photo &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Arial&apos;; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Actualización instalada con éxito&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;La actualización de Stellar Repair for Photo se ha descargado e instalado con éxito.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Haga clic en OK y reinicie Stellar Repair for Photo para ejecutar la versión actualizada de Stellar Repair for Photo.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Update of Stellar Phoenix JPEG Repair downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Click on OK and restart Stellar Phoenix JPEG Repair to run updated Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Actualización instalada con éxito&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;La actualización de Stellar Phoenix JPEG Repair fue descargada e instalada con éxito.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Haga clic en OK y en Reiniciar para ejecutar la versión actualizada de Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Update of Stellar Phoenix JPEG Repair downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Click on OK and restart &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Stellar Phoenix JPEG Repair&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; to run updated &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Stellar Phoenix JPEG Repair&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Actualización instalada con éxito&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;La actualización de Stellar Phoenix JPEG Repair fue descargada e instalada con éxito.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Haga clic en OK y en Reiniciar para ejecutar la versión actualizada de Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Downloading under progress...</source>
+        <translation type="obsolete">Descarga en Proceso...</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:9pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Lucida Grande&apos;; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:10pt;&quot;&gt;Update of Stellar Phoenix JPEG Repair  downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Lucida Grande&apos;; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Lucida Grande&apos;; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Lucida Grande&apos;; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Lucida Grande&apos;; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:10pt;&quot;&gt;Click on OK and Restart to run updated Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Actualización instalada con éxito&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;La actualización de Stellar Phoenix JPEG Repair fue descargada e instalada con éxito.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Haga clic en OK y en Reiniciar para ejecutar la versión actualizada de Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Update of Stellar Phoenix JPEG Repair  downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click on OK and Restart to run updated Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Actualización instalada con éxito&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;La actualización de Stellar Phoenix JPEG Repair fue descargada e instalada con éxito.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Haga clic en OK y en Reiniciar para ejecutar la versión actualizada de Stellar Phoenix JPEG Repair.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Update of Stellar Volume Repair downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click on OK and restart &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Stellar Volume Repair&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; to run updated &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Stellar Volume Repair&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Update of Stellar Volume Repair downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Click on OK and restart &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Stellar Volume Repair&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; to run updated &lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Stellar Volume Repair&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Update successfully installed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Update of Stellar Volume Recovery downloaded and installed successfully.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-le

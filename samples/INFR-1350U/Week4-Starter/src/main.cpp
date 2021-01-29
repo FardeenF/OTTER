@@ -96,6 +96,17 @@ int main() {
 	glEnable(GL_DEBUG_OUTPUT);
 	glDebugMessageCallback(GlDebugMessage, nullptr);
 
+	GLfloat vertices[] = { -1, -1, 0, // bottom left corner
+						   -1,  1, 0, // top left corner
+						    1,  1, 0, // top right corner
+						    1, -1, 0 }; // bottom right corner
+
+
+	GLuint elements[] = {
+			0, 1, 2,
+			2, 3, 0
+	};
+
 	static const float points[] = {
 		-0.5f, -0.5f, 0.0f,
 		0.5f, -0.5f, 0.0f,
@@ -105,6 +116,7 @@ int main() {
 	static const float colors[] = {
 		1.0f, 0.0f, 0.0f,
 		0.0f, 1.0f, 0.0f,
+		0.0f, 0.0f, 1.0f,
 		0.0f, 0.0f, 1.0f
 	};
 
@@ -122,10 +134,10 @@ int main() {
 
 	//VBO - Vertex buffer object
 	VertexBuffer::sptr posVbo = VertexBuffer::Create();
-	posVbo->LoadData(points, 9);
+	posVbo->LoadData(vertices, 12);
 
 	VertexBuffer::sptr color_vbo = VertexBuffer::Create();
-	color_vbo->LoadData(colors, 9);
+	color_vbo->LoadData(colors, 12);
 
 	VertexArrayObject::sptr vao = VertexArrayObject::Create();
 	vao->AddVertexBuffer(posVbo, {
@@ -224,7 +236,8 @@ int main() {
 		shader->SetUniformMatrix("u_ModelViewProjection", camera->GetViewProjection() * transform);
 
 		vao->Bind();
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, elements);
+		//glDrawArrays(GL_TRIANGLES, 0, 3);
 		vao->UnBind();
 
 
