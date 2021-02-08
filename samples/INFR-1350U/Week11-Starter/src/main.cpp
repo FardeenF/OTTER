@@ -831,9 +831,9 @@ int main() {
 
 
 			spriteShader->Bind();
-			SetupShaderForFrame(spriteShader, orthoView, orthoProjection);
+			SetupShaderForFrame(spriteShader, view, projection);
 			spriteMaterial->Apply();
-			RenderVAO(spriteShader, spriteVao, orthoViewProjection, spriteObj.get<Transform>());
+			RenderVAO(shader, spriteVao, viewProjection, spriteObj.get<Transform>());
 
 
 			spriteObj.get<Transform>().SetLocalPosition(cameraObject.get<Transform>().GetLocalPosition() + glm::vec3(0.0f, -5.0f, 0.0f));
