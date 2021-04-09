@@ -204,11 +204,11 @@ private:
 	AudioEngine() {}
 
 private:
-	
+
 	// FMOD Systems
 	FMOD::Studio::System* m_StudioSystem;
 	FMOD::System* m_System;
-	
+
 	// Listener
 	AudioListener m_Listener;
 
@@ -222,7 +222,5 @@ private:
 	std::unordered_map<std::string, AudioBus*> m_BusMap;
 
 };
-
-
 
 

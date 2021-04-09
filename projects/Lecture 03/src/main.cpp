@@ -95,7 +95,7 @@ int main() {
 		 1.0f, -0.5f, 0.4f,
 		 0.0f,  0.5f, 0.4f
 	};
-
+	
 	static const GLfloat colors[] = {
 		1.0f, 0.0f, 0.0f,	//Red - First Triangle
 		0.0f, 1.0f, 0.0f,	//Green - Second Triangle
