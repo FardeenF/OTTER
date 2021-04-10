@@ -50,6 +50,8 @@ bool isLeft = true;
 int CoinCount = 0;
 bool gotCoin = false;
 
+bool isHit = false;
+
 //Scene number
 int RenderGroupBool = 0;
 int PlayerHealth = 3;
@@ -65,12 +67,16 @@ bool canMoveBack = true;
 bool canMoveRight = true;
 bool playerControlLock = false;
 
+bool sortByQuantity = false;
+bool sortByLetter = false;
+bool sortByColor = false;
+
 
 int firstFrame = 0;
 int lastFrame = 4;
 bool pauseGame = false;
 bool drawPhysics = false;
-
+bool moveWizard = false;
 bool playerAirborne = false;
 
 int menuSelect = 1;
@@ -137,6 +143,8 @@ float interactSketchyGuy1Distance = 0;
 float interactSketchyGuy2Distance = 0;
 bool showInteraction = false;
 int dialogueSelect = 0;
+
+bool panToObjects = false;
 
 bool puzzleSelect = false;
 int puzzleTracker = 0;
@@ -434,6 +442,15 @@ void swapPositions(GameObject& obj1, GameObject& obj2)
 	obj2.get<Transform>().SetLocalPosition(temp);
 }
 
+void swapObjects(GameObject& obj1, GameObject& obj2)
+{
+	GameObject temp = obj1;
+
+	obj1 = obj2;
+
+	obj2 = temp;
+}
+
 void swapPos(Transform& obj1, Transform& obj2)
 {
 	glm::vec3 temp = obj1.GetLocalPosition();
@@ -463,7 +480,61 @@ void swapPos(Transform& obj1, Transform& obj2)
 
 
 
-void bubbleSort(GameObject data[], int n)
+void bubbleSortQuantity(GameObject data[], int n, float dt)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		//std::cout << "\n I: " << i << std::endl;
+
+		for (int j = n - 1; j > i; --j)
+		{
+			//std::cout << "\n J: " << j << std::endl;
+			if (data[j].get<SortingInfo>().GetQuantity() < data[j - 1].get<SortingInfo>().GetQuantity())
+			{
+				swapPositions(data[j], data[j - 1]);
+				swapObjects(data[j], data[j - 1]);
+			}
+
+			
+			std::cout << "\nSorted Array Step " << i + 1 << ": { ";
+
+			for (int k = 0; k < n; k++)
+			{
+				std::cout << data[k].get<SortingInfo>().GetQuantity() << " ";
+			}
+			std::cout << "}" << std::endl;
+		}
+	}
+}
+
+void bubbleSortLetter(GameObject data[], int n, float dt)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		//std::cout << "\n I: " << i << std::endl;
+
+		for (int j = n - 1; j > i; --j)
+		{
+			//std::cout << "\n J: " << j << std::endl;
+			if (data[j].get<SortingInfo>().GetAlphabet() < data[j - 1].get<SortingInfo>().GetAlphabet())
+			{
+				swapPositions(data[j], data[j - 1]);
+				swapObjects(data[j], data[j - 1]);
+			}
+
+
+			std::cout << "\nSorted Array Step " << i + 1 << ": { ";
+
+			for (int k = 0; k < n; k++)
+			{
+				std::cout << data[k].get<SortingInfo>().GetQuantity() << " ";
+			}
+			std::cout << "}" << std::endl;
+		}
+	}
+}
+
+void bubbleSortColor(GameObject data[], int n, float dt)
 {
 	for (int i = 0; i < n - 1; i++)
 	{
@@ -473,7 +544,19 @@ void bubbleSort(GameObject data[], int n)
 		{
 			//std::cout << "\n J: " << j << std::endl;
 			if (data[j].get<SortingInfo>().GetColor() < data[j - 1].get<SortingInfo>().GetColor())
+			{
 				swapPositions(data[j], data[j - 1]);
+				swapObjects(data[j], data[j - 1]);
+			}
+
+
+			std::cout << "\nSorted Array Step " << i + 1 << ": { ";
+
+			for (int k = 0; k < n; k++)
+			{
+				std::cout << data[k].get<SortingInfo>().GetQuantity() << " ";
+			}
+			std::cout << "}" << std::endl;
 		}
 	}
 }
@@ -618,6 +701,7 @@ void MoveWizard(GameObject player, GameObject wizard, btRigidBody* wizardBody, b
 
 	if (distance2.x <= 4.0f && distance2.y <= 4.0f && CoinCount >= 1 && glfwGetKey(BackendHandler::window, GLFW_KEY_E) == GLFW_PRESS)
 	{
+		moveWizard = true;
 		CoinCount = 0;
 		//wizard.get<Transform>().SetLocalPosition(wizard.get<Transform>().GetLocalPosition() + glm::vec3(-33.0f, 5.0f, 0.0f));
 		wizardTransform.setOrigin(btVector3(-47.5f, 5.0f, -2.5f));
@@ -739,6 +823,7 @@ void CheckPhantomCollision(GameObject player, btRigidBody *playerBody, btTransfo
 		player.get<Transform>().GetLocalPosition().y <= other.get<Transform>().GetLocalPosition().y + yRangePos &&
 		player.get<Transform>().GetLocalPosition().y >= other.get<Transform>().GetLocalPosition().y - yRangeNeg)
 	{
+		isHit = true;
 		PlayerHealth--;
 		playerTransform.setOrigin(btVector3(0.0f, 0.0f, 5.0f));
 		playerBody->setWorldTransform(playerTransform);
@@ -750,6 +835,7 @@ void CheckPhantomCollision(GameObject player, btRigidBody *playerBody, btTransfo
 		player.get<Transform>().GetLocalPosition().y <= other.get<Transform>().GetLocalPosition().y + yRangePos &&
 		player.get<Transform>().GetLocalPosition().y >= other.get<Transform>().GetLocalPosition().y - yRangeNeg)
 	{
+		isHit = true;
 		PlayerHealth--;
 		playerTransform.setOrigin(btVector3(0.0f, 0.0f, 5.0f));
 		playerBody->setWorldTransform(playerTransform);
@@ -762,6 +848,7 @@ void CheckPhantomCollision(GameObject player, btRigidBody *playerBody, btTransfo
 		player.get<Transform>().GetLocalPosition().x <= other.get<Transform>().GetLocalPosition().x + xRangeNeg &&
 		player.get<Transform>().GetLocalPosition().x >= other.get<Transform>().GetLocalPosition().x - xRangePos)
 	{
+		isHit = true;
 		PlayerHealth--;
 		playerTransform.setOrigin(btVector3(0.0f, 0.0f, 5.0f));
 		playerBody->setWorldTransform(playerTransform);
@@ -773,6 +860,7 @@ void CheckPhantomCollision(GameObject player, btRigidBody *playerBody, btTransfo
 		player.get<Transform>().GetLocalPosition().x <= other.get<Transform>().GetLocalPosition().x + xRangeNeg &&
 		player.get<Transform>().GetLocalPosition().x >= other.get<Transform>().GetLocalPosition().x - xRangePos)
 	{
+		isHit = true;
 		PlayerHealth--;
 		playerTransform.setOrigin(btVector3(0.0f, 0.0f, 5.0f));
 		playerBody->setWorldTransform(playerTransform);;
@@ -966,6 +1054,16 @@ void panCamera(GameObject& camera, GameObject& orthoCamera, glm::vec3 target, fl
 }
 
 #pragma endregion
+
+void clearSortingItems()
+{
+	appleHeld = false;
+	bananaHeld = false;
+	greenGrapeHeld = false;
+	purpleGrapeHeld = false;
+	carrotHeld = false;
+	blueDonutHeld = false;
+}
 
 
 //Callback for specific object ids
@@ -1499,7 +1597,7 @@ int main() {
 
 					float intensity = temp->GetIntensity();
 
-					if (ImGui::SliderFloat("Intensity", &intensity, 400.0f, 3000.0f))
+					if (ImGui::SliderFloat("Intensity", &intensity, 400.0f, 8000.0f))
 					{
 						temp->SetIntensity(intensity);
 					}
@@ -2120,6 +2218,11 @@ int main() {
 		Texture2D::sptr quizDiffuseD2 = Texture2D::LoadFromFile("images/Dialogue/Quiz2.png");
 		Texture2D::sptr quizDiffuseD3 = Texture2D::LoadFromFile("images/Dialogue/Quiz3.png");
 
+		Texture2D::sptr confirmDiffuse = Texture2D::LoadFromFile("images/Dialogue/Confirm.png");
+		Texture2D::sptr numberDiffuse = Texture2D::LoadFromFile("images/Dialogue/Number.png");
+		Texture2D::sptr letterDiffuse = Texture2D::LoadFromFile("images/Dialogue/Letter.png");
+		Texture2D::sptr colorDiffuse = Texture2D::LoadFromFile("images/Dialogue/Color.png");
+
 		Texture2D::sptr quizSelectDiffuse = Texture2D::LoadFromFile("images/Dialogue/QuizSelect.png");
 		Texture2D::sptr selectObjectDiffuse = Texture2D::LoadFromFile("images/Dialogue/SelectObject.png");
 		Texture2D::sptr swapObjectDiffuse = Texture2D::LoadFromFile("images/Dialogue/SwapObject.png");
@@ -2593,7 +2696,7 @@ int main() {
 		Texture2D::sptr winMenuDiffuse = Texture2D::LoadFromFile("images/YouWin.png");
 
 		ShaderMaterial::sptr winMenuMat = ShaderMaterial::Create();
-		winMenuMat->Shader = shader;
+		winMenuMat->Shader = spriteShader;
 		winMenuMat->Set("s_Diffuse", winMenuDiffuse);
 		winMenuMat->Set("s_DiffuseRamp", diffuseRamp);
 		winMenuMat->Set("s_SpecularRamp", specularRamp);
@@ -2832,6 +2935,26 @@ int main() {
 		swapObjectMat->Shader = spriteShader;
 		swapObjectMat->Set("s_Diffuse", swapObjectDiffuse);
 		swapObjectMat->RenderLayer = 0;
+
+		ShaderMaterial::sptr confirmMat = ShaderMaterial::Create();
+		confirmMat->Shader = spriteShader;
+		confirmMat->Set("s_Diffuse", confirmDiffuse);
+		confirmMat->RenderLayer = 0;
+
+		ShaderMaterial::sptr numberMat = ShaderMaterial::Create();
+		numberMat->Shader = spriteShader;
+		numberMat->Set("s_Diffuse", numberDiffuse);
+		numberMat->RenderLayer = 0;
+
+		ShaderMaterial::sptr letterMat = ShaderMaterial::Create();
+		letterMat->Shader = spriteShader;
+		letterMat->Set("s_Diffuse", letterDiffuse);
+		letterMat->RenderLayer = 0;
+
+		ShaderMaterial::sptr colorMat = ShaderMaterial::Create();
+		colorMat->Shader = spriteShader;
+		colorMat->Set("s_Diffuse", colorDiffuse);
+		colorMat->RenderLayer = 0;
 
 		#pragma endregion
 
@@ -3348,6 +3471,20 @@ int main() {
 			player.get<MorphRenderer>().SetFrameTime(0.85, 2);
 
 
+			//Shiver Animation
+			std::string shiverPrefix = "models/Player/Shiver/SkyBoundCharacterShiver0";
+			std::string shiverFileName;
+
+			for (int i = 0; i < 8; i++)
+			{
+				shiverFileName = shiverPrefix + std::to_string(i) + ".obj";
+
+				player.get<MorphRenderer>().addFrame(MorphLoader::LoadFromFile(shiverFileName), 3);
+
+			}
+
+			player.get<MorphRenderer>().SetFrameTime(0.85, 3);
+
 
 			/*
 			player.emplace<MorphRenderer>();
@@ -3541,6 +3678,7 @@ int main() {
 		{
 			Wizard.emplace<MorphRenderer>();
 
+			//Idle Animation
 			std::string IdlePrefix = "models/BridgeKeeper/Wizard0";
 			std::string IdleFileName;
 
@@ -3554,6 +3692,22 @@ int main() {
 
 			Wizard.get<MorphRenderer>().SetFrameTime(0.7f, 0);
 			Wizard.get<MorphRenderer>().SetLooping(true, 0);
+
+
+			//Teleport Animation
+			std::string teleportPrefix = "models/BridgeKeeper/Teleport/WizardTeleport";
+			std::string teleportFileName;
+
+			for (int i = 0; i < 12; i++)
+			{
+				teleportFileName = teleportPrefix + std::to_string(i) + ".obj";
+
+				Wizard.get<MorphRenderer>().addFrame(MorphLoader::LoadFromFile(teleportFileName), 1);
+
+			}
+
+			Wizard.get<MorphRenderer>().SetFrameTime(0.85, 1);
+			Wizard.get<MorphRenderer>().SetLooping(false, 1);
 
 
 			Wizard.get<MorphRenderer>().SetMesh(Wizard.get<MorphRenderer>().vao).SetMaterial(material2);
@@ -3817,6 +3971,25 @@ int main() {
 
 		GameObject Portal = scene->CreateEntity("Portal");
 		{
+
+			Portal.emplace<MorphRenderer>();
+
+			//Idle Animation
+			std::string IdlePrefix = "models/Portal/portal_updated0";
+			std::string IdleFileName;
+
+			for (int i = 0; i <= 4; i++)
+			{
+				IdleFileName = IdlePrefix + std::to_string(i) + ".obj";
+
+				Portal.get<MorphRenderer>().addFrame(MorphLoader::LoadFromFile(IdleFileName), 0);
+
+			}
+
+			Portal.get<MorphRenderer>().SetFrameTime(0.7f, 0);
+			Portal.get<MorphRenderer>().SetLooping(true, 0);
+
+
 			VertexArrayObject::sptr PortalVAO = ObjLoader::LoadFromFile("models/portal.obj");
 			Portal.emplace<RendererComponent>().SetMesh(PortalVAO).SetMaterial(material8).SetCastShadow(false);
 			Portal.get<Transform>().SetLocalPosition(-48.0f, -0.0f, 1.0f);
@@ -4658,7 +4831,7 @@ int main() {
 
 			VertexArrayObject::sptr bananasVAO = ObjLoader::LoadFromFile("models/SortingObjects/Bananas.obj");
 			bananasObj2.emplace<RendererComponent>().SetMesh(bananasVAO).SetMaterial(bananaMat);
-			bananasObj2.get<Transform>().SetLocalPosition(-14.4f, 89.5f, -3.0f);
+			bananasObj2.get<Transform>().SetLocalPosition(-10.4f, 89.5f, -3.0f);
 			bananasObj2.get<Transform>().SetLocalRotation(90.0f, 0.0f, 30.0f);
 			bananasObj2.get<Transform>().SetLocalScale(0.3f, 0.3f, 0.3f);
 			BehaviourBinding::BindDisabled<SimpleMoveBehaviour>(bananasObj);
@@ -4673,7 +4846,7 @@ int main() {
 
 			VertexArrayObject::sptr appleVAO = ObjLoader::LoadFromFile("models/SortingObjects/RedApples.obj");
 			appleObj2.emplace<RendererComponent>().SetMesh(appleVAO).SetMaterial(appleMat);
-			appleObj2.get<Transform>().SetLocalPosition(-14.4f, 95.0f, -3.0f);
+			appleObj2.get<Transform>().SetLocalPosition(-10.4f, 95.0f, -3.0f);
 			appleObj2.get<Transform>().SetLocalRotation(90.0f, 0.0f, 70.0f);
 			appleObj2.get<Transform>().SetLocalScale(1.0f, 1.0f, 1.0f);
 			BehaviourBinding::BindDisabled<SimpleMoveBehaviour>(appleObj);
@@ -4688,7 +4861,7 @@ int main() {
 
 			VertexArrayObject::sptr carrotVAO = ObjLoader::LoadFromFile("models/SortingObjects/Carrots.obj");
 			carrotObj2.emplace<RendererComponent>().SetMesh(carrotVAO).SetMaterial(carrotMat);
-			carrotObj2.get<Transform>().SetLocalPosition(-14.4f, 100.0f, -3.0f);
+			carrotObj2.get<Transform>().SetLocalPosition(-10.4f, 100.0f, -3.0f);
 			carrotObj2.get<Transform>().SetLocalRotation(90.0f, 0.0f, 70.0f);
 			carrotObj2.get<Transform>().SetLocalScale(1.0f, 1.0f, 1.0f);
 			BehaviourBinding::BindDisabled<SimpleMoveBehaviour>(carrotObj);
@@ -4703,7 +4876,7 @@ int main() {
 
 			VertexArrayObject::sptr greenGrapeVAO = ObjLoader::LoadFromFile("models/SortingObjects/GreenGrapes.obj");
 			greenGrapeObj2.emplace<RendererComponent>().SetMesh(greenGrapeVAO).SetMaterial(greenGrapeMat);
-			greenGrapeObj2.get<Transform>().SetLocalPosition(-14.4f, 105.0f, -3.0f);
+			greenGrapeObj2.get<Transform>().SetLocalPosition(-10.4f, 105.0f, -3.0f);
 			greenGrapeObj2.get<Transform>().SetLocalRotation(90.0f, 0.0f, 70.0f);
 			greenGrapeObj2.get<Transform>().SetLocalScale(1.0f, 1.0f, 1.0f);
 			BehaviourBinding::BindDisabled<SimpleMoveBehaviour>(greenGrapeObj);
@@ -4718,7 +4891,7 @@ int main() {
 
 			VertexArrayObject::sptr purpleGrapeVAO = ObjLoader::LoadFromFile("models/SortingObjects/PurpleGrapes.obj");
 			purpleGrapeObj2.emplace<RendererComponent>().SetMesh(purpleGrapeVAO).SetMaterial(purpleGrapeMat);
-			purpleGrapeObj2.get<Transform>().SetLocalPosition(-14.4f, 110.0f, -3.0f);
+			purpleGrapeObj2.get<Transform>().SetLocalPosition(-10.4f, 110.0f, -3.0f);
 			purpleGrapeObj2.get<Transform>().SetLocalRotation(90.0f, 0.0f, 70.0f);
 			purpleGrapeObj2.get<Transform>().SetLocalScale(1.5f, 1.5f, 1.5f);
 			BehaviourBinding::BindDisabled<SimpleMoveBehaviour>(purpleGrapeObj);
@@ -4733,7 +4906,7 @@ int main() {
 
 			VertexArrayObject::sptr blueDonutVAO = ObjLoader::LoadFromFile("models/SortingObjects/BlueDonut.obj");
 			blueDonutObj2.emplace<RendererComponent>().SetMesh(blueDonutVAO).SetMaterial(blueDonutMat);
-			blueDonutObj2.get<Transform>().SetLocalPosition(-14.4f, 115.0f, -3.0f);
+			blueDonutObj2.get<Transform>().SetLocalPosition(-10.4f, 115.0f, -3.0f);
 			blueDonutObj2.get<Transform>().SetLocalRotation(90.0f, 0.0f, 70.0f);
 			blueDonutObj2.get<Transform>().SetLocalScale(1.0f, 1.0f, 1.0f);
 			BehaviourBinding::BindDisabled<SimpleMoveBehaviour>(blueDonutObj);
@@ -4823,7 +4996,7 @@ int main() {
 		{
 			parkingMeter.emplace<MorphRenderer>();
 
-			std::string IdlePrefix = "models/ParkingMeter/Parking_Meter_00000";
+			std::string IdlePrefix = "models/ParkingMeter/Parking_Meter_0000";
 			std::string IdleFileName;
 
 			for (int i = 1; i < 8; i++)
@@ -5740,6 +5913,22 @@ int main() {
 
 		GameObject Portal2 = scene2->CreateEntity("Portal2");
 		{
+			Portal2.emplace<MorphRenderer>();
+
+			//Idle Animation
+			std::string IdlePrefix = "models/Portal/portal_updated0";
+			std::string IdleFileName;
+
+			for (int i = 0; i <= 4; i++)
+			{
+				IdleFileName = IdlePrefix + std::to_string(i) + ".obj";
+
+				Portal2.get<MorphRenderer>().addFrame(MorphLoader::LoadFromFile(IdleFileName), 0);
+
+			}
+			Portal2.get<MorphRenderer>().SetFrameTime(0.7f, 0);
+			Portal2.get<MorphRenderer>().SetLooping(true, 0);
+
 			VertexArrayObject::sptr Portal2VAO = ObjLoader::LoadFromFile("models/portal.obj");
 			Portal2.emplace<RendererComponent>().SetMesh(Portal2VAO).SetMaterial(material8);
 			Portal2.get<Transform>().SetLocalPosition(-52.0f, 50.0f, 1.0f);
@@ -6807,6 +6996,22 @@ int main() {
 
 		GameObject Portal3 = scene4->CreateEntity("Portal3");
 		{
+			Portal3.emplace<MorphRenderer>();
+
+			//Idle Animation
+			std::string IdlePrefix = "models/Portal/portal_updated0";
+			std::string IdleFileName;
+
+			for (int i = 0; i <= 4; i++)
+			{
+				IdleFileName = IdlePrefix + std::to_string(i) + ".obj";
+
+				Portal3.get<MorphRenderer>().addFrame(MorphLoader::LoadFromFile(IdleFileName), 0);
+
+			}
+			Portal3.get<MorphRenderer>().SetFrameTime(0.7f, 0);
+			Portal3.get<MorphRenderer>().SetLooping(true, 0);
+
 			VertexArrayObject::sptr FirePlatformVAO = ObjLoader::LoadFromFile("models/portal.obj");
 			Portal3.emplace<RendererComponent>().SetMesh(FirePlatformVAO).SetMaterial(material8);
 			Portal3.get<Transform>().SetLocalPosition(-73.0f, 0.0f, 9.5f);
@@ -7809,18 +8014,41 @@ int main() {
 
 			#pragma endregion
 
-
+			int sortCounter = 0;
 			keyToggles.emplace_back(GLFW_KEY_G, [&]() {
 				if (RenderGroupBool == 2 && !sortingItemHeld)
 				{
-					if (blueDonutObj.get<Transform>().GetLocalPosition().y < purpleGrapeObj.get<Transform>().GetLocalPosition().y &&
-						greenGrapeObj.get<Transform>().GetLocalPosition().y < carrotObj.get<Transform>().GetLocalPosition().y &&
-						appleObj.get<Transform>().GetLocalPosition().y < bananasObj.get<Transform>().GetLocalPosition().y)
+					if (sortCounter == 0 && blueDonutObj.get<Transform>().GetLocalPosition().y < carrotObj.get<Transform>().GetLocalPosition().y &&
+						appleObj.get<Transform>().GetLocalPosition().y < purpleGrapeObj.get<Transform>().GetLocalPosition().y &&
+						bananasObj.get<Transform>().GetLocalPosition().y < greenGrapeObj.get<Transform>().GetLocalPosition().y)
 					{
+						sortByQuantity = true;
+						sortCounter++;
 						coinDescend2 = true;
-						std::cout << "\nWINNER!!!" << std::endl;
 					}
+					else if (sortCounter == 1 && appleObj.get<Transform>().GetLocalPosition().y < carrotObj.get<Transform>().GetLocalPosition().y &&
+						bananasObj.get<Transform>().GetLocalPosition().y < greenGrapeObj.get<Transform>().GetLocalPosition().y &&
+						bananasObj.get<Transform>().GetLocalPosition().y < purpleGrapeObj.get<Transform>().GetLocalPosition().y)
+					{
+						sortByLetter = true;
+						sortCounter++;
+					}
+					else if (sortCounter == 2 && appleObj.get<Transform>().GetLocalPosition().y < carrotObj.get<Transform>().GetLocalPosition().y &&
+						bananasObj.get<Transform>().GetLocalPosition().y < greenGrapeObj.get<Transform>().GetLocalPosition().y &&
+						bananasObj.get<Transform>().GetLocalPosition().y < purpleGrapeObj.get<Transform>().GetLocalPosition().y)
+					{
+						sortByLetter = true;
+						sortCounter++;
+						coinDescend2 = true;
+					}
+					else
+					{
+						PlayerHealth--;
+					}
+
 				}
+
+				
 			});
 
 			#pragma region Interaction Keys
@@ -8086,22 +8314,27 @@ int main() {
 							if (bananaHeld)
 							{
 								swapPositions(bananasObj, appleObj);
+								clearSortingItems();
 							}
 							else if (greenGrapeHeld)
 							{
 								swapPositions(greenGrapeObj, appleObj);
+								clearSortingItems();
 							}
 							else if (purpleGrapeHeld)
 							{
 								swapPositions(purpleGrapeObj, appleObj);
+								clearSortingItems();
 							}
 							else if (carrotHeld)
 							{
 								swapPositions(carrotObj, appleObj);
+								clearSortingItems();
 							}
 							else if (blueDonutHeld)
 							{
 								swapPositions(blueDonutObj, appleObj);
+								clearSortingItems();
 							}
 						}
 					}
@@ -8119,22 +8352,27 @@ int main() {
 							if (appleHeld)
 							{
 								swapPositions(appleObj, bananasObj);
+								clearSortingItems();
 							}
 							else if (greenGrapeHeld)
 							{
 								swapPositions(greenGrapeObj, bananasObj);
+								clearSortingItems();
 							}
 							else if (purpleGrapeHeld)
 							{
 								swapPositions(purpleGrapeObj, bananasObj);
+								clearSortingItems();
 							}
 							else if (carrotHeld)
 							{
 								swapPositions(carrotObj, bananasObj);
+								clearSortingItems();
 							}
 							else if (blueDonutHeld)
 							{
 								swapPositions(blueDonutObj, bananasObj);
+								clearSortingItems();
 							}
 						}
 					}
@@ -8152,22 +8390,27 @@ int main() {
 							if (appleHeld)
 							{
 								swapPositions(appleObj, greenGrapeObj);
+								clearSortingItems();
 							}
 							else if (bananaHeld)
 							{
 								swapPositions(bananasObj, greenGrapeObj);
+								clearSortingItems();
 							}
 							else if (purpleGrapeHeld)
 							{
 								swapPositions(purpleGrapeObj, greenGrapeObj);
+								clearSortingItems();
 							}
 							else if (carrotHeld)
 							{
 								swapPositions(carrotObj, greenGrapeObj);
+								clearSortingItems();
 							}
 							else if (blueDonutHeld)
 							{
 								swapPositions(blueDonutObj, greenGrapeObj);
+								clearSortingItems();
 							}
 						}
 					}
@@ -8185,22 +8428,27 @@ int main() {
 							if (appleHeld)
 							{
 								swapPositions(appleObj, purpleGrapeObj);
+								clearSortingItems();
 							}
 							else if (bananaHeld)
 							{
 								swapPositions(bananasObj, purpleGrapeObj);
+								clearSortingItems();
 							}
 							else if (greenGrapeHeld)
 							{
 								swapPositions(greenGrapeObj, purpleGrapeObj);
+								clearSortingItems();
 							}
 							else if (carrotHeld)
 							{
 								swapPositions(carrotObj, purpleGrapeObj);
+								clearSortingItems();
 							}
 							else if (blueDonutHeld)
 							{
 								swapPositions(blueDonutObj, purpleGrapeObj);
+								clearSortingItems();
 							}
 						}
 					}
@@ -8218,22 +8466,27 @@ int main() {
 							if (appleHeld)
 							{
 								swapPositions(appleObj, carrotObj);
+								clearSortingItems();
 							}
 							else if (bananaHeld)
 							{
 								swapPositions(bananasObj, carrotObj);
+								clearSortingItems();
 							}
 							else if (greenGrapeHeld)
 							{
 								swapPositions(greenGrapeObj, carrotObj);
+								clearSortingItems();
 							}
 							else if (purpleGrapeHeld)
 							{
 								swapPositions(purpleGrapeObj, carrotObj);
+								clearSortingItems();
 							}
 							else if (blueDonutHeld)
 							{
 								swapPositions(blueDonutObj, carrotObj);
+								clearSortingItems();
 							}
 						}
 					}
@@ -8251,24 +8504,40 @@ int main() {
 							if (appleHeld)
 							{
 								swapPositions(appleObj, blueDonutObj);
+								clearSortingItems();
 							}
 							else if (bananaHeld)
 							{
 								swapPositions(bananasObj, blueDonutObj);
+								clearSortingItems();
 							}
 							else if (greenGrapeHeld)
 							{
 								swapPositions(greenGrapeObj, blueDonutObj);
+								clearSortingItems();
 							}
 							else if (purpleGrapeHeld)
 							{
 								swapPositions(purpleGrapeObj, blueDonutObj);
+								clearSortingItems();
 							}
 							else if (carrotHeld)
 							{
 								swapPositions(carrotObj, blueDonutObj);
+								clearSortingItems();
 							}
 						}
+					}
+
+					#pragma endregion
+
+
+					#pragma Sorting Puzzle
+
+					if (startSortingPuzzle && interactSketchyGuy2Distance <= 8.0f)
+					{
+						panToObjects = true;
+
 					}
 
 					#pragma endregion
@@ -8383,6 +8652,7 @@ int main() {
 					startPanCamera = false;
 					playerControlLock = false;
 					moveWizard1 = true;
+
 					
 				}
 
@@ -8674,6 +8944,9 @@ int main() {
 		float cutsceneTimer = 0.0f;
 		bool setFinalCamera = true;
 		bool isGameFinished = false;
+		float vigTimer = 0.0f;
+		float teleportTimer = 0.0f;
+		bool isTeleporting = false;
 
 		Application::Instance().scenes.push_back(scene0);
 		Application::Instance().scenes.push_back(scene);
@@ -8682,6 +8955,14 @@ int main() {
 		Application::Instance().scenes.push_back(scene4);
 
 		menu.Play();
+
+
+		PixelateEffect* pixelEffect = (PixelateEffect*)scene3Effects[6];
+		float intensity = pixelEffect->GetIntensity();
+
+		
+
+		pixelEffect->SetIntensity(intensity);
 
 		///// Game loop /////
 		while (!glfwWindowShouldClose(BackendHandler::window)) {
@@ -8735,6 +9016,57 @@ int main() {
 
 			//checkPosition(player);
 			
+			#pragma endregion
+
+			if (RenderGroupBool == 4)
+			{
+				if (pixelEffect->GetIntensity() >= 400.0f && !isGameFinished)
+				{
+					intensity = intensity - 1.0f;
+					pixelEffect->SetIntensity(intensity);
+				}
+			}
+			
+
+			#pragma region PhantomCol
+			if (RenderGroupBool == 1)
+			{
+				CheckPhantomCollision(player, playerBody, playerTransform, Phantom, 0.8f, 0.8f, 0.8f, 0.8f);
+				CheckPhantomCollision(player, playerBody, playerTransform, Phantom2, 0.8f, 0.8f, 0.8f, 0.8f);
+			}
+			else if (RenderGroupBool == 2)
+			{
+				//CheckPhantomCollision(player, playerBody, playerTransform, PhantomLevel2, 0.8f, 0.8f, 0.8f, 0.8f);
+				//CheckPhantomCollision(player, playerBody, playerTransform, Phantom2Level2, 0.8f, 0.8f, 0.8f, 0.8f);
+			}
+			#pragma endregion
+
+			#pragma region vignette controls
+			if (isHit == true)
+			{
+				activeEffect = 5;
+				vigTimer += time.DeltaTime;
+
+
+
+				if (vigTimer >= 0.2f)
+				{
+					if (RenderGroupBool == 1)
+						activeEffect = 4;
+					else if (RenderGroupBool == 2)
+						activeEffect = 2;
+					else if (RenderGroupBool == 3)
+						activeEffect = 1;
+
+					isHit = false;
+					vigTimer = 0.0f;
+
+
+				}
+
+
+
+			}
 			#pragma endregion
 
 
@@ -8875,6 +9207,12 @@ int main() {
 
 			#pragma endregion
 
+			if (RenderGroupBool == 2 && CoinCount == 2)
+			{
+				parkingMeterPoleTransform.setOrigin(btVector3(50.0f, 50.0f, 50.0f));
+				parkingMeterPoleBody->setWorldTransform(parkingMeterPoleTransform);
+			}
+
 
 			#pragma region Distance Checking
 
@@ -8924,6 +9262,7 @@ int main() {
 			if (player.get<Transform>().GetLocalPosition().z <= -7.0f)
 			{
 				PlayerHealth--;
+				//isHit = true;
 				if (RenderGroupBool != 2)
 				{
 					playerTransform.setOrigin(btVector3(0.0f, 0.0f, 5.0f));
@@ -8970,6 +9309,7 @@ int main() {
 				Application::Instance().ActiveScene = scene2;
 				BG.StopImmediately();
 				Islandmusic2.Play();
+				CoinCount = 0;
 			}
 
 			if (player.get<Transform>().GetLocalPosition().x <= -52.0f && RenderGroupBool == 2)
@@ -8985,7 +9325,9 @@ int main() {
 			if (player.get<Transform>().GetLocalPosition().x <= -73.0f && RenderGroupBool == 4)
 			{
 				Islandmusic3.StopImmediately();
+
 				footsteps.StopImmediately();
+				PlayerHealth = 3;
 				playerControlLock = true;
 				lastMenuObj.get<Transform>().SetLocalPosition(-5.0f, 0.0f, 10.0f);
 
@@ -9008,6 +9350,9 @@ int main() {
 
 			if (isGameFinished)
 			{
+				intensity = 10000.0f;
+				pixelEffect->SetIntensity(intensity);
+
 				if (setFinalCamera)
 				{
 					cameraObject4.get<Transform>().SetLocalPosition(0.0f, 0.0f, 0.0f).LookAt(lastMenuObj.get<Transform>().GetLocalPosition());
@@ -9096,14 +9441,39 @@ int main() {
 
 			#pragma region Sorting Puzzle
 
-			if (coinDescend2 && RenderGroupBool == 2)
+			if (sortByQuantity && RenderGroupBool == 2)
 			{
 				GameObject arr[6] = { bananasObj2, appleObj2,
 				carrotObj2, greenGrapeObj2,
 				purpleGrapeObj2, blueDonutObj2 };
 
-				bubbleSort(arr, 6);
-				coinDescend2 = false;
+				bubbleSortQuantity(arr, 6, time.DeltaTime);
+
+				sortByQuantity = false;
+			}
+
+			if (sortByLetter && RenderGroupBool == 2)
+			{
+				sortByLetter == false;
+
+				GameObject arr[6] = { bananasObj2, appleObj2,
+				carrotObj2, greenGrapeObj2,
+				purpleGrapeObj2, blueDonutObj2 };
+
+				bubbleSortLetter(arr, 6, time.DeltaTime);
+
+				sortByLetter == false;
+			}
+
+			if (sortByColor && RenderGroupBool == 2)
+			{
+
+				GameObject arr[6] = { bananasObj2, appleObj2,
+				carrotObj2, greenGrapeObj2,
+				purpleGrapeObj2, blueDonutObj2 };
+
+				bubbleSortColor(arr, 6, time.DeltaTime);
+				sortByColor == false;
 			}
 
 			#pragma endregion
@@ -9126,6 +9496,23 @@ int main() {
 				float coin2DescendTPos = coin2DescendTimer / coin2DescendLimit;
 
 				Coin2.get<Transform>().SetLocalPosition(LERP(glm::vec3(-19.6f, 6.6f, 50.5f), glm::vec3(-19.6f, 6.6f, -1.5f), coin2DescendTPos));
+			}
+
+			if (coinDescend2)
+			{
+				coin2DescendTimer += time.DeltaTime;
+
+				//Resetting timers and adjusting back/forth booleans.
+				if (coin2DescendTimer >= coin2DescendLimit)
+				{
+					//playerControlLock = true;
+					coinDescend2 = false;
+				}
+
+				//Calculate t.
+				float coin2DescendTPos = coin2DescendTimer / coin2DescendLimit;
+
+				Coin2.get<Transform>().SetLocalPosition(LERP(sketchyGuy2.get<Transform>().GetLocalPosition() + glm::vec3(0, -5.0f, 50), sketchyGuy2.get<Transform>().GetLocalPosition() + glm::vec3(0, -5.0f, 0), coin2DescendTPos));
 			}
 
 			if (puzzleSelect)
@@ -9653,6 +10040,25 @@ int main() {
 
 						showInteraction = true;
 					}
+					else if (startSortingPuzzle && interactSketchyGuy2Distance <= 8.0f)
+					{
+						panCamera(cameraObject2, orthoCameraObject2, sketchyGuy2, time.DeltaTime, -20.0f, 0.0f, 20.0f);
+
+						/*dialogueL2.get<Transform>().SetLocalPosition(wallButton.get<Transform>().GetLocalPosition().x,
+							sketchyGuy.get<Transform>().GetLocalPosition().y + 1.8f,
+							sketchyGuy.get<Transform>().GetLocalPosition().z + 4.8f);*/
+
+						interactionObj2.get<Transform>().SetLocalPosition(sketchyGuy2.get<Transform>().GetLocalPosition().x - 20.0f,
+							sketchyGuy2.get<Transform>().GetLocalPosition().y,
+							sketchyGuy2.get<Transform>().GetLocalPosition().z + 15.0f);
+						GameObject arr[6] = { bananasObj2, appleObj2,
+												carrotObj2, greenGrapeObj2,
+												purpleGrapeObj2, blueDonutObj2 };
+
+						showInteraction = true;
+
+						
+					}
 					#pragma region Snowmen Distances
 
 					else if (redSnowmanDistance <= 3.0f)
@@ -9801,107 +10207,7 @@ int main() {
 					}
 					#pragma endregion
 
-					/*#pragma region Sorting Objects
-
-					else if (appleDistance <= 3.0f)
-					{
-						panCamera(cameraObject2, orthoCameraObject2, appleObj, time.DeltaTime, 4.0f, 0.0f, 5.0f);
-
-						dialogueL2.get<Transform>().SetLocalPosition(appleObj.get<Transform>().GetLocalPosition().x,
-							appleObj.get<Transform>().GetLocalPosition().y + 1.8f,
-							appleObj.get<Transform>().GetLocalPosition().z + 4.8f);
-
-						interactionObj2.get<Sprite>().SetMaterial(continueMat);
-
-						interactionObj2.get<Transform>().SetLocalPosition(appleObj.get<Transform>().GetLocalPosition().x,
-							appleObj.get<Transform>().GetLocalPosition().y,
-							appleObj.get<Transform>().GetLocalPosition().z + 0.3f);
-
-						showInteraction = true;
-					}
-					else if (bananaDistance <= 3.0f)
-					{
-						panCamera(cameraObject2, orthoCameraObject2, bananasObj, time.DeltaTime, 4.0f, 0.0f, 5.0f);
-
-						dialogueL2.get<Transform>().SetLocalPosition(bananasObj.get<Transform>().GetLocalPosition().x,
-							bananasObj.get<Transform>().GetLocalPosition().y + 1.8f,
-							bananasObj.get<Transform>().GetLocalPosition().z + 4.8f);
-
-						interactionObj2.get<Sprite>().SetMaterial(continueMat);
-
-						interactionObj2.get<Transform>().SetLocalPosition(bananasObj.get<Transform>().GetLocalPosition().x,
-							bananasObj.get<Transform>().GetLocalPosition().y,
-							bananasObj.get<Transform>().GetLocalPosition().z + 0.3f);
-
-						showInteraction = true;
-					}
-					else if (greenGrapeDistance <= 3.0f)
-					{
-						panCamera(cameraObject2, orthoCameraObject2, greenGrapeObj, time.DeltaTime, 4.0f, 0.0f, 5.0f);
-
-						dialogueL2.get<Transform>().SetLocalPosition(greenGrapeObj.get<Transform>().GetLocalPosition().x,
-							greenGrapeObj.get<Transform>().GetLocalPosition().y + 1.8f,
-							greenGrapeObj.get<Transform>().GetLocalPosition().z + 4.8f);
-
-						interactionObj2.get<Sprite>().SetMaterial(continueMat);
-
-						interactionObj2.get<Transform>().SetLocalPosition(greenGrapeObj.get<Transform>().GetLocalPosition().x,
-							greenGrapeObj.get<Transform>().GetLocalPosition().y,
-							greenGrapeObj.get<Transform>().GetLocalPosition().z + 0.3f);
-
-						showInteraction = true;
-					}
-					else if (purpleGrapeDistance <= 3.0f)
-					{
-						panCamera(cameraObject2, orthoCameraObject2, purpleGrapeObj, time.DeltaTime, 4.0f, 0.0f, 5.0f);
-
-						dialogueL2.get<Transform>().SetLocalPosition(purpleGrapeObj.get<Transform>().GetLocalPosition().x,
-							purpleGrapeObj.get<Transform>().GetLocalPosition().y + 1.8f,
-							purpleGrapeObj.get<Transform>().GetLocalPosition().z + 4.8f);
-
-						interactionObj2.get<Sprite>().SetMaterial(continueMat);
-
-						interactionObj2.get<Transform>().SetLocalPosition(purpleGrapeObj.get<Transform>().GetLocalPosition().x,
-							purpleGrapeObj.get<Transform>().GetLocalPosition().y,
-							purpleGrapeObj.get<Transform>().GetLocalPosition().z + 0.3f);
-
-						showInteraction = true;
-					}
-					else if (blueDonutDistance <= 3.0f)
-					{
-						panCamera(cameraObject2, orthoCameraObject2, blueDonutObj, time.DeltaTime, 4.0f, 0.0f, 5.0f);
-
-						dialogueL2.get<Transform>().SetLocalPosition(blueDonutObj.get<Transform>().GetLocalPosition().x,
-							blueDonutObj.get<Transform>().GetLocalPosition().y + 1.8f,
-							blueDonutObj.get<Transform>().GetLocalPosition().z + 4.8f);
-
-						interactionObj2.get<Sprite>().SetMaterial(continueMat);
-
-						interactionObj2.get<Transform>().SetLocalPosition(blueDonutObj.get<Transform>().GetLocalPosition().x,
-							blueDonutObj.get<Transform>().GetLocalPosition().y,
-							blueDonutObj.get<Transform>().GetLocalPosition().z + 0.3f);
-
-						showInteraction = true;
-					}
-					else if (carrotDistance <= 3.0f)
-					{
-						panCamera(cameraObject2, orthoCameraObject2, carrotObj, time.DeltaTime, 4.0f, 0.0f, 5.0f);
-
-						dialogueL2.get<Transform>().SetLocalPosition(carrotObj.get<Transform>().GetLocalPosition().x,
-							carrotObj.get<Transform>().GetLocalPosition().y + 1.8f,
-							carrotObj.get<Transform>().GetLocalPosition().z + 4.8f);
-
-						interactionObj2.get<Sprite>().SetMaterial(continueMat);
-
-						interactionObj2.get<Transform>().SetLocalPosition(carrotObj.get<Transform>().GetLocalPosition().x,
-							carrotObj.get<Transform>().GetLocalPosition().y,
-							carrotObj.get<Transform>().GetLocalPosition().z + 0.3f);
-
-						showInteraction = true;
-					}
-
-
-					#pragma endregion*/
+					
 				}
 				
 				if ((interactDistance <= 8.0f || interactSketchyGuy1Distance <= 8.0f || interactSketchyGuy2Distance <= 8.0f || interactButtonDistance <= 5.0f) &&
@@ -10308,21 +10614,35 @@ int main() {
 
 			if (moveWizard1)
 			{
+				
 				wizardMoveTimer += time.DeltaTime;
+				isTeleporting = true;
+				 //Teleport
 
-				if (wizardMoveTimer >= 2.0f)
+				if (wizardMoveTimer >= 1.5f)
 				{
 					wizardTransform.setOrigin(btVector3(-47.5f, 5.0f, -2.5f));
 					wizardBody->setWorldTransform(wizardTransform);
-
+					
 					btCollisionShape* wizardShape = new btBoxShape(btVector3(1.1f, 1.1f, 2.4f));
 					wizardBody->setCollisionShape(wizardShape);
 
 					dialogueL1D1.get<Sprite>().SetMaterial(dialogueMatL2D1);
+					
 
 					wizardMoveTimer = 0.0f;
 					moveWizard1 = false;
+					isTeleporting = false;
 				}
+				
+			}
+			if (isTeleporting)
+			{
+				Wizard.get<MorphRenderer>().nextFrame(time.DeltaTime, 1);
+			}
+			else
+			{
+				Wizard.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
 			}
 			//MoveWizard(player, Wizard, wizardBody, wizardTransform, WizardDistance);
 
@@ -10698,14 +11018,22 @@ int main() {
 
 				#pragma region Rendering Animated Models
 
+				
 				//Animated Models
-				Wizard.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
+				if (moveWizard1 == false)
+					Wizard.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
+				else
+					Wizard.get<MorphRenderer>().nextFrame(time.DeltaTime, 1);
 				shadowBuffer->BindDepthAsTexture(30);
 				Wizard.get<MorphRenderer>().render(morphShader, viewProjection, Wizard.get<Transform>(), view, viewProjection, lightSpaceViewProj);
 
 				Phantom.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
 				shadowBuffer->BindDepthAsTexture(30);
 				Phantom.get<MorphRenderer>().render(morphShader, viewProjection, Phantom.get<Transform>(), view, viewProjection, lightSpaceViewProj);
+
+				/*Portal.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
+				shadowBuffer->BindDepthAsTexture(30);
+				Portal.get<MorphRenderer>().render(morphShader, viewProjection, Portal.get<Transform>(), view, viewProjection, lightSpaceViewProj);*/
 
 				Phantom2.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
 				shadowBuffer->BindDepthAsTexture(30);
@@ -10732,9 +11060,13 @@ int main() {
 				{
 					player.get<MorphRenderer>().nextFrame(time.DeltaTime, 2); //Jump
 				}
+
 				else
 				{
-					player.get<MorphRenderer>().nextFrame(time.DeltaTime, 0); //Idle
+					if (RenderGroupBool != 2)
+						player.get<MorphRenderer>().nextFrame(time.DeltaTime, 0); //Idle
+					else if (RenderGroupBool == 2)
+						player.get<MorphRenderer>().nextFrame(time.DeltaTime, 3); //Shiver
 				}
 				shadowBuffer->BindDepthAsTexture(30);
 				player.get<MorphRenderer>().render(morphShader, viewProjection, player.get<Transform>(), view, viewProjection, lightSpaceViewProj);
@@ -11054,16 +11386,7 @@ int main() {
 				//CheckPhantomCollision(player, playerBody, playerTransform, PhantomLevel2, 0.8f, 0.8f, 0.8f, 0.8f);
 				//CheckPhantomCollision(player, playerBody, playerTransform, Phantom2Level2, 0.8f, 0.8f, 0.8f, 0.8f);
 
-				if (RenderGroupBool == 1)
-				{
-					CheckPhantomCollision(player, playerBody, playerTransform, Phantom, 0.8f, 0.8f, 0.8f, 0.8f);
-					CheckPhantomCollision(player, playerBody, playerTransform, Phantom2, 0.8f, 0.8f, 0.8f, 0.8f);
-				}
-				else if (RenderGroupBool == 2)
-				{
-					//CheckPhantomCollision(player, playerBody, playerTransform, PhantomLevel2, 0.8f, 0.8f, 0.8f, 0.8f);
-					//CheckPhantomCollision(player, playerBody, playerTransform, Phantom2Level2, 0.8f, 0.8f, 0.8f, 0.8f);
-				}
+				
 				
 				#pragma region Render Player
 
@@ -11081,7 +11404,7 @@ int main() {
 				}
 				else
 				{
-					player.get<MorphRenderer>().nextFrame(time.DeltaTime, 0); //Idle
+					player.get<MorphRenderer>().nextFrame(time.DeltaTime, 3); //Shiver
 				}
 				shadowBuffer->BindDepthAsTexture(30);
 				player.get<MorphRenderer>().render(morphShader, viewProjection, player.get<Transform>(), view, viewProjection, lightSpaceViewProj);
@@ -11094,7 +11417,7 @@ int main() {
 
 				#pragma region Rendering Animated Models
 
-				//Animated Models
+
 				Wizard.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
 				shadowBuffer->BindDepthAsTexture(30);
 				Wizard.get<MorphRenderer>().render(morphShader, viewProjection, Wizard.get<Transform>(), view, viewProjection, lightSpaceViewProj);
@@ -11102,6 +11425,10 @@ int main() {
 				parkingMeter.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
 				shadowBuffer->BindDepthAsTexture(30);
 				parkingMeter.get<MorphRenderer>().render(morphShader, viewProjection, parkingMeter.get<Transform>(), view, viewProjection, lightSpaceViewProj);
+
+				//Portal2.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
+				////shadowBuffer->BindDepthAsTexture(30);
+				//Portal2.get<MorphRenderer>().render(morphShader, viewProjection, Portal2.get<Transform>(), view, viewProjection, lightSpaceViewProj);
 
 				parkingMeterPole.get<MorphRenderer>().nextFrame(time.DeltaTime, 0);
 				shadowBuffer->BindDepthAsTexture(30);
@@ -11276,8 +11603,17 @@ int main() {
 				{
 					activeEffect = 1;
 
+					PixelateEffect* temp = (PixelateEffect*)scene3Effects[6];
+					float intensity = temp->GetIntensity();
+
+					intensity = 8000.0f;
+
+					temp->SetIntensity(intensity);
+
 					initScene4 = false;
 				}
+
+
 
 				if (!destroyedScene2Objects)
 				{
@@ -11384,7 +11720,7 @@ int main() {
 
 				if (width > 900)
 				{
-					lastMenuObj.get<Transform>().SetLocalScale(1.14f, 1.0f, 0.6f);
+					lastMenuObj.get<Transform>().SetLocalScale(1.14f, 1.0f, 1.5f);
 				}
 				else
 				{
@@ -11437,7 +11773,10 @@ int main() {
 				}
 				else
 				{
-					player.get<MorphRenderer>().nextFrame(time.DeltaTime, 0); //Idle
+					if (RenderGroupBool != 2)
+						player.get<MorphRenderer>().nextFrame(time.DeltaTime, 0); //Idle
+					else if (RenderGroupBool == 2)
+						player.get<MorphRenderer>().nextFrame(time.DeltaTime, 3); //Idle
 				}
 				shadowBuffer->BindDepthAsTexture(30);
 				player.get<MorphRenderer>().render(morphShader, viewProjection, player.get<Transform>(), view, viewProjection);
@@ -11533,6 +11872,9 @@ int main() {
 				basicEffect3->UnbindBuffer();
 
 				scene3Effects[activeEffect]->ApplyEffect(basicEffect3);
+
+				scene3Effects[6]->ApplyEffect(scene3Effects[activeEffect]);
+				
 
 				scene3Effects[activeEffect]->DrawToScreen();
 
