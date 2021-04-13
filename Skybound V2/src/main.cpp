@@ -1147,10 +1147,15 @@ int main() {
 	AudioEvent& Islandmusic2 = engine.GetEvent("music2");
 	AudioEvent& Islandmusic3 = engine.GetEvent("music3");
 
+	AudioEvent& BGMusic = engine.GetEvent("BGMusic");
+	AudioEvent& Skyboundanese = engine.GetEvent("Skyboundanese");
+
 
 	AudioEvent& Prelude1 = engine.GetEvent("Narration1");
 	AudioEvent& Prelude2 = engine.GetEvent("Narration2");
 	AudioEvent& Prelude3 = engine.GetEvent("Narration3");
+
+	AudioEvent& GameNarration = engine.GetEvent("NewNarration");
 
 	#pragma endregion
 
@@ -1420,6 +1425,11 @@ int main() {
 		bool diffuseRampToggle = false;
 		bool specularRampToggle = false;
 
+		bool rimLighting = false;
+		bool morphRimLighting = false;
+		glm::vec3 rimColor = glm::vec3(0.0f, 1.0f, 0.0f);
+
+		shader->SetUniform("u_RimEffect", (int)rimLighting);
 		shader->SetUniform("u_LightToggle", (int)lightingToggle);
 		shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 		shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1428,6 +1438,7 @@ int main() {
 		shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 		shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
 
+		morphShader->SetUniform("u_RimEffect", (int)morphRimLighting);
 		morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 		morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 		morphShader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1447,6 +1458,7 @@ int main() {
 		Framebuffer* shadowBuffer3;
 
 		int activeEffect = 4;
+		int activeBlur = 0;
 		std::vector<PostEffect*> effects;
 
 		//Effects
@@ -1557,17 +1569,51 @@ int main() {
 				if (activeEffect == 4)
 				{
 					ImGui::Text("Active Effect: Bloom Effect");
+					ImGui::SliderInt("Blur Types", &activeBlur, 0, 2);
 
-					BloomEffect* temp = (BloomEffect*)effects[activeEffect];
-					float passes = temp->GetPasses();
-					float threshold = temp->GetThreshold();
+					if (activeBlur == 0)
+					{
+						ImGui::Text("Guassian Blur");
+						BloomEffect* temp = (BloomEffect*)effects[activeEffect];
+						float passes = temp->GetPasses();
+						float threshold = temp->GetThreshold();
 
-					if (ImGui::SliderFloat("Blur Value", &passes, 0.0f, 40.0f)) {
-						temp->SetPasses(passes);
+						if (ImGui::SliderFloat("Blur Value", &passes, 0.0f, 40.0f)) {
+							temp->SetPasses(passes);
+						}
+						if (ImGui::SliderFloat("Brightness Threshold", &threshold, 0.0f, 2.0f)) {
+							temp->SetThreshold(threshold);
+						}
 					}
-					if (ImGui::SliderFloat("Brightness Threshold", &threshold, 0.0f, 2.0f)) {
-						temp->SetThreshold(threshold);
+					if (activeBlur == 1)
+					{
+						ImGui::Text("Box Blur");
+						BloomEffect* temp = (BloomEffect*)effects[activeEffect];
+						float passes = temp->GetPasses();
+						float threshold = temp->GetThreshold();
+
+						if (ImGui::SliderFloat("Blur Value", &passes, 0.0f, 40.0f)) {
+							temp->SetPasses(passes);
+						}
+						if (ImGui::SliderFloat("Brightness Threshold", &threshold, 0.0f, 2.0f)) {
+							temp->SetThreshold(threshold);
+						}
 					}
+					if (activeBlur == 2)
+					{
+						ImGui::Text("Radial Blur");
+						BloomEffect* temp = (BloomEffect*)effects[activeEffect];
+						float passes = temp->GetPasses();
+						float threshold = temp->GetThreshold();
+
+						if (ImGui::SliderFloat("Blur Value", &passes, 0.0f, 40.0f)) {
+							temp->SetPasses(passes);
+						}
+						if (ImGui::SliderFloat("Brightness Threshold", &threshold, 0.0f, 2.0f)) {
+							temp->SetThreshold(threshold);
+						}
+					}
+					
 				}
 				if (activeEffect == 5)
 				{
@@ -1867,6 +1913,7 @@ int main() {
 					customToggle = false;
 					diffuseRampToggle = false;
 					specularRampToggle = false;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1874,6 +1921,7 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -1892,6 +1940,7 @@ int main() {
 					customToggle = false;
 					diffuseRampToggle = false;
 					specularRampToggle = false;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1899,6 +1948,7 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -1917,6 +1967,7 @@ int main() {
 					customToggle = false;
 					diffuseRampToggle = false;
 					specularRampToggle = false;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1924,6 +1975,7 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -1942,6 +1994,7 @@ int main() {
 					customToggle = false;
 					diffuseRampToggle = false;
 					specularRampToggle = false;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1949,6 +2002,7 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -1967,6 +2021,7 @@ int main() {
 					customToggle = true;
 					diffuseRampToggle = false;
 					specularRampToggle = false;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1974,6 +2029,7 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -1992,6 +2048,7 @@ int main() {
 					customToggle = false;
 					diffuseRampToggle = true;
 					specularRampToggle = false;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -1999,6 +2056,7 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -2017,6 +2075,7 @@ int main() {
 					customToggle = false;
 					diffuseRampToggle = false;
 					specularRampToggle = true;
+					rimLighting = false;
 					shader->SetUniform("u_LightToggle", (int)lightingToggle);
 					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
 					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
@@ -2024,6 +2083,34 @@ int main() {
 					shader->SetUniform("u_CustomToggle", (int)customToggle);
 					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
 					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
+
+					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
+					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
+					morphShader->SetUniform("u_SpecularToggle", (int)specularToggle);
+					morphShader->SetUniform("u_AmbientSpecularToggle", (int)ambientSpecularToggle);
+					morphShader->SetUniform("u_CustomToggle", (int)customToggle);
+					morphShader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
+					morphShader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+				}
+				if (ImGui::Checkbox("Rim Lighting", &rimLighting))
+				{
+					lightingToggle = false;
+					ambientToggle = false;
+					specularToggle = false;
+					ambientSpecularToggle = false;
+					customToggle = true;
+					diffuseRampToggle = false;
+					specularRampToggle = false;
+
+					shader->SetUniform("u_LightToggle", (int)lightingToggle);
+					shader->SetUniform("u_AmbientToggle", (int)ambientToggle);
+					shader->SetUniform("u_SpecularToggle", (int)specularToggle);
+					shader->SetUniform("u_AmbientSpecularToggle", (int)ambientSpecularToggle);
+					shader->SetUniform("u_CustomToggle", (int)customToggle);
+					shader->SetUniform("u_DiffuseRampToggle", (int)diffuseRampToggle);
+					shader->SetUniform("u_SpecularRampToggle", (int)specularRampToggle);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					morphShader->SetUniform("u_LightToggle", (int)lightingToggle);
 					morphShader->SetUniform("u_AmbientToggle", (int)ambientToggle);
@@ -2275,6 +2362,7 @@ int main() {
 		// Load the cube map
 		//TextureCubeMap::sptr environmentMap = TextureCubeMap::LoadFromImages("images/cubemaps/skybox/sample.jpg");
 		TextureCubeMap::sptr environmentMap = TextureCubeMap::LoadFromImages("images/cubemaps/skybox/ToonSky.jpg"); 
+		TextureCubeMap::sptr fireMap = TextureCubeMap::LoadFromImages("images/cubemaps/fireskybox/FireSky.jpg");
 
 		// Creating an empty texture
 		Texture2DDescription desc = Texture2DDescription();  
@@ -7028,7 +7116,7 @@ int main() {
 
 		#pragma region Post Effects
 		
-		//glfwGetWindowSize(BackendHandler::window, &width, &height);
+		glfwGetWindowSize(BackendHandler::window, &width, &height);
 
 		/*GameObject shadowBufferObject3 = scene4->CreateEntity("Shadow Buffer");
 		{
@@ -7781,6 +7869,12 @@ int main() {
 			skyboxMat->Set("u_EnvironmentRotation", glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1, 0, 0))));
 			skyboxMat->RenderLayer = 100;
 
+			ShaderMaterial::sptr fireSkyboxMat = ShaderMaterial::Create();
+			fireSkyboxMat->Shader = skybox;
+			fireSkyboxMat->Set("s_Environment", fireMap);
+			fireSkyboxMat->Set("u_EnvironmentRotation", glm::mat3(glm::rotate(glm::mat4(1.0f), glm::radians(90.0f), glm::vec3(1, 0, 0))));
+			fireSkyboxMat->RenderLayer = 100;
+
 			MeshBuilder<VertexPosNormTexCol> mesh;
 			MeshFactory::AddIcoSphere(mesh, glm::vec3(0.0f), 1.0f);
 			MeshFactory::InvertFaces(mesh);
@@ -7800,7 +7894,7 @@ int main() {
 
 			GameObject skyboxObj4 = scene4->CreateEntity("skybox4");
 			skyboxObj4.get<Transform>().SetLocalPosition(0.0f, 0.0f, 0.0f);
-			skyboxObj4.get_or_emplace<RendererComponent>().SetMesh(meshVao).SetMaterial(skyboxMat).SetCastShadow(false);;
+			skyboxObj4.get_or_emplace<RendererComponent>().SetMesh(meshVao).SetMaterial(fireSkyboxMat).SetCastShadow(false);;
 		}
 		////////////////////////////////////////////////////////////////////////////////////////
 		
@@ -7974,10 +8068,13 @@ int main() {
 				else if (menuSelect == 1)
 				{
 					menuSelect = 3;
+
 					//menu.StopImmediately();
 					//Prelude1.Play();
 					//RenderGroupBool = 1;
 					//Application::Instance().ActiveScene = scene;
+					GameNarration.Play();
+
 				}
 				else if (menuSelect == 2)
 				{
@@ -7986,17 +8083,20 @@ int main() {
 				else if (menuSelect == 3)
 				{
 					menuSelect = 4;
+
 					//Prelude1.StopImmediately();
 					//Prelude2.Play();
 				}
 				else if (menuSelect == 4)
 				{
+
 					menuSelect = 5;
 					//Prelude2.StopImmediately();
 					//Prelude3.Play();
 				}
 				else if (menuSelect == 5)
 				{
+					
 					menuSelect = 6;
 					//Prelude3.StopImmediately();
 				}
@@ -8044,6 +8144,7 @@ int main() {
 					else
 					{
 						PlayerHealth--;
+						popSound.Play();
 					}
 
 				}
@@ -8063,20 +8164,28 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							//Skyboundanese.Play();
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 
 							if (RenderGroupBool == 1 && CoinCount > 0)
 							{
 								dialogueL1D1.get<Sprite>().SetMaterial(dialogueMatL1D11);
+								
 							}
+							
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 
 						}
+					}
+					else
+					{
+						Skyboundanese.StopImmediately();
 					}
 				}
 				else if (RenderGroupBool == 2)
@@ -8087,27 +8196,36 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 
 							if (RenderGroupBool == 2 && interactDistance <= 8.0f)
 							{
 								dialogueL2.get<Sprite>().SetMaterial(dialogueMatL2D1);
+								
 							}
+							
 
 							if (RenderGroupBool == 2 && interactSketchyGuy1Distance <= 8.0f)
 							{
 								dialogueL2.get<Sprite>().SetMaterial(sketchyGuy1Mat1);
+								
 							}
+							
+							
 
 							if (RenderGroupBool == 2 && interactSketchyGuy2Distance <= 8.0f)
 							{
 								dialogueL2.get<Sprite>().SetMaterial(sketchyGuy2Mat1);
+								
 							}
+							
 
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 
@@ -8120,6 +8238,7 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 
@@ -8140,6 +8259,7 @@ int main() {
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 							puzzleSelect = false;
@@ -8156,12 +8276,14 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 							dialogueL2.get<Sprite>().SetMaterial(redSnowmanTextMat);
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 						}
@@ -8172,12 +8294,14 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 							dialogueL2.get<Sprite>().SetMaterial(greenSnowmanTextMat);
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 						}
@@ -8188,12 +8312,14 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 							dialogueL2.get<Sprite>().SetMaterial(blueSnowmanTextMat);
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 						}
@@ -8203,13 +8329,15 @@ int main() {
 						if (!startPanCamera)
 						{
 							posTimer = 0.0f;
-							startPanCamera = true;
+							
+							Skyboundanese.Play();
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 							dialogueL2.get<Sprite>().SetMaterial(brownSnowmanTextMat);
 						}
 						else
 						{
+							
 							startPanCamera = false;
 							playerControlLock = false;
 						}
@@ -8220,6 +8348,7 @@ int main() {
 						{
 							posTimer = 0.0f;
 							startPanCamera = true;
+							
 							playerControlLock = true;
 							std::cout << "\nPanned Camera!" << std::endl;
 							dialogueL2.get<Sprite>().SetMaterial(purpleSnowmanTextMat);
@@ -8578,6 +8707,7 @@ int main() {
 				else if(puzzleSelect && puzzleTracker != 8)
 				{
 					PlayerHealth--;
+					popSound.Play();
 					startPanCamera = false;
 					playerControlLock = false;
 					puzzleSelect = false;
@@ -8954,13 +9084,19 @@ int main() {
 		Application::Instance().scenes.push_back(scene3);
 		Application::Instance().scenes.push_back(scene4);
 
-		menu.Play();
+		//menu.Play();
+		BGMusic.SetParameter("Level", 0);
+		footsteps.SetParameter("WalkType", 1);
+		GameNarration.SetParameter("Number", 0);
+
+		
 
 
 		PixelateEffect* pixelEffect = (PixelateEffect*)scene3Effects[6];
 		float intensity = pixelEffect->GetIntensity();
 
-		
+		BGMusic.Play();
+		//GameNarration.Play();
 
 		pixelEffect->SetIntensity(intensity);
 
@@ -9018,7 +9154,7 @@ int main() {
 			
 			#pragma endregion
 
-			if (RenderGroupBool == 4)
+			if (RenderGroupBool == 4 && player.get<Transform>().GetLocalPosition().x <= -5.0f)
 			{
 				if (pixelEffect->GetIntensity() >= 400.0f && !isGameFinished)
 				{
@@ -9046,7 +9182,7 @@ int main() {
 			{
 				activeEffect = 5;
 				vigTimer += time.DeltaTime;
-
+				popSound.Play();
 
 
 				if (vigTimer >= 0.2f)
@@ -9060,6 +9196,7 @@ int main() {
 
 					isHit = false;
 					vigTimer = 0.0f;
+					
 
 
 				}
@@ -9262,6 +9399,7 @@ int main() {
 			if (player.get<Transform>().GetLocalPosition().z <= -7.0f)
 			{
 				PlayerHealth--;
+				popSound.Play();
 				//isHit = true;
 				if (RenderGroupBool != 2)
 				{
@@ -9291,6 +9429,7 @@ int main() {
 			#pragma endregion
 
 
+
 			#pragma region Switching Scenes
 
 			//if (glfwGetKey(BackendHandler::window, GLFW_KEY_ENTER) == GLFW_PRESS && RenderGroupBool == 0) {
@@ -9307,8 +9446,9 @@ int main() {
 				playerBody->setWorldTransform(playerTransform);
 				RenderGroupBool = 2;
 				Application::Instance().ActiveScene = scene2;
-				BG.StopImmediately();
-				Islandmusic2.Play();
+				//BG.StopImmediately();
+				//Islandmusic2.Play();
+				BGMusic.SetParameter("Level", 2);
 				CoinCount = 0;
 			}
 
@@ -9318,8 +9458,9 @@ int main() {
 				playerBody->setWorldTransform(playerTransform);
 				RenderGroupBool = 4;
 				Application::Instance().ActiveScene = scene4;
-				Islandmusic2.StopImmediately();
-				Islandmusic3.Play();
+				/*Islandmusic2.StopImmediately();
+				Islandmusic3.Play();*/
+				BGMusic.SetParameter("Level", 3);
 			}
 
 			if (player.get<Transform>().GetLocalPosition().x <= -73.0f && RenderGroupBool == 4)
@@ -9332,6 +9473,8 @@ int main() {
 				lastMenuObj.get<Transform>().SetLocalPosition(-5.0f, 0.0f, 10.0f);
 
 				isGameFinished = true;
+				menuSelect = 10;
+				GameNarration.SetParameter("Number", 3);
 			}
 
 			if (PlayerHealth <= 0)
@@ -9362,16 +9505,19 @@ int main() {
 
 				//lastMenuObj.get<Transform>().SetLocalScale(2.0f, 2.0f, 2.0f);
 				lastMenuObj.get<Sprite>().SetMaterial(cutsceneMat1);
-
+				//GameNarration.SetParameter("Number", 3);
+				menuSelect = 10;
 				cutsceneTimer += time.DeltaTime;
 
 				if (cutsceneTimer >= 5.0f)
 				{
 					lastMenuObj.get<Sprite>().SetMaterial(cutsceneMat2);
+					menuSelect = 11;
 
 					if (cutsceneTimer >= 10.0f)
 					{
 						lastMenuObj.get<Sprite>().SetMaterial(cutsceneMat3);
+						menuSelect = 12;
 
 						if (cutsceneTimer >= 15.0f)
 						{
@@ -9391,9 +9537,12 @@ int main() {
 				
 				//Prelude2.Play();
 				storyTimer += time.DeltaTime;
-				Prelude1.Play();
-				if (storyTimer > 8.3f)
+				//Prelude1.Play();
+				//GameNarration.SetParameter("Number", 0);
+				
+				if (storyTimer > 6.0f)
 				{
+					GameNarration.Play();
 					menuSelect = 4;
 					storyTimer = 0.0f;
 				}
@@ -9403,10 +9552,11 @@ int main() {
 				playMenuObj.get<Sprite>().SetMaterial(story2Mat);
 				
 				storyTimer += time.DeltaTime;
-				Prelude1.StopImmediately();
-				Prelude2.Play();
-				if (storyTimer > 7.4f)
+				GameNarration.SetParameter("Number", 1);
+				GameNarration.Play();
+				if (storyTimer > 6.2f)
 				{
+					GameNarration.Play();
 					menuSelect = 5;
 					storyTimer = 0.0f;
 				}
@@ -9414,12 +9564,12 @@ int main() {
 			else if (menuSelect == 5)
 			{
 				playMenuObj.get<Sprite>().SetMaterial(story3Mat);
-				Prelude1.StopImmediately();
-				Prelude2.StopImmediately();
-				Prelude3.Play();
+				
 				storyTimer += time.DeltaTime;
+				GameNarration.SetParameter("Number", 2);
+				GameNarration.Play();
 
-				if (storyTimer > 7.0f)
+				if (storyTimer > 6.0f)
 				{
 					menuSelect = 6;
 					storyTimer = 0.0f;
@@ -9427,13 +9577,31 @@ int main() {
 			}
 			else if (menuSelect == 6)
 			{
-				Prelude1.StopImmediately();
-				Prelude2.StopImmediately();
-				Prelude3.StopImmediately();
+				GameNarration.StopImmediately();
 				menuSelect = 7;
 				RenderGroupBool = 1;
+				BGMusic.SetParameter("Level", 1);
 				//menu.StopImmediately();
 				Application::Instance().ActiveScene = scene;
+			}
+
+			else if (menuSelect == 10)
+			{
+				GameNarration.Play();
+				GameNarration.SetParameter("Number", 3);
+				GameNarration.Play();
+			}
+
+			else if (menuSelect == 11)
+			{
+				GameNarration.SetParameter("Number", 4);
+				GameNarration.Play();
+			}
+
+			else if (menuSelect == 12)
+			{
+				GameNarration.SetParameter("Number", 5);
+				GameNarration.Play();
 			}
 
 			#pragma endregion
@@ -9886,6 +10054,7 @@ int main() {
 						Wizard.get<Transform>().GetLocalPosition().z + 0.3f);
 
 					showInteraction = true;
+					
 				}
 
 				if (interactDistance <= 8.0f && !startPanCamera && !playerAirborne && Wizard.get<Transform>().GetLocalPosition().x > -30.0f)
@@ -10670,7 +10839,7 @@ int main() {
 
 				if (width > 900)
 				{
-					playerBody->applyCentralImpulse(btVector3(0.0f, 0.0f, 6000.0f) * time.DeltaTime);
+					playerBody->applyCentralImpulse(btVector3(0.0f, 0.0f, 3000.0f) * time.DeltaTime);
 				}
 				else
 				{
@@ -10903,7 +11072,7 @@ int main() {
 
 			#pragma endregion
 
-
+			
 			#pragma region Render Level 1 (Scene 1)
 
 			if (RenderGroupBool == 1)
@@ -10931,6 +11100,9 @@ int main() {
 				if (initScene1)
 				{
 					activeEffect = 4;
+
+					rimColor = glm::vec3(0.0f, 1.0f, 0.0f);
+					shader->SetUniform("u_RimColor", rimColor);
 					
 					initScene1 = false;
 				}
@@ -11087,6 +11259,8 @@ int main() {
 				//Player Walking
 				if (glfwGetKey(BackendHandler::window, GLFW_KEY_W) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_D) == GLFW_PRESS)
 				{
+					
+					footsteps.SetParameter("WalkType", 1);
 					footsteps.Play();
 				}
 				else
@@ -11247,6 +11421,9 @@ int main() {
 					directionalLightBuffer.SendData(reinterpret_cast<void*>(&theSun), sizeof(DirectionalLight));
 					
 					activeEffect = 2;
+
+					rimColor = glm::vec3(0.039f, 0.952f, 1.0f);
+					shader->SetUniform("u_RimColor", rimColor);
 
 					scene2ShaderInit = true;
 				}
@@ -11549,6 +11726,8 @@ int main() {
 				//Player Walking
 				if (glfwGetKey(BackendHandler::window, GLFW_KEY_W) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_D) == GLFW_PRESS)
 				{
+					
+					footsteps.SetParameter("WalkType", 2);
 					footsteps.Play();
 				}
 				else
@@ -11609,6 +11788,11 @@ int main() {
 					intensity = 8000.0f;
 
 					temp->SetIntensity(intensity);
+
+					rimLighting = true;
+					rimColor = glm::vec3(1.0f, 0.0f, 0.0f);
+					shader->SetUniform("u_RimColor", rimColor);
+					shader->SetUniform("u_RimEffect", (int)rimLighting);
 
 					initScene4 = false;
 				}
@@ -11717,10 +11901,10 @@ int main() {
 
 				glViewport(0, 0, width, height);
 				basicEffect3->BindBuffer(0);
-
+				
 				if (width > 900)
 				{
-					lastMenuObj.get<Transform>().SetLocalScale(1.14f, 1.0f, 1.5f);
+					lastMenuObj.get<Transform>().SetLocalScale(1.14f + bodyTranslation.x, 1.0f + bodyTranslation.y, 1.35f + bodyTranslation.z);
 				}
 				else
 				{
@@ -11778,8 +11962,11 @@ int main() {
 					else if (RenderGroupBool == 2)
 						player.get<MorphRenderer>().nextFrame(time.DeltaTime, 3); //Idle
 				}
-				shadowBuffer->BindDepthAsTexture(30);
-				player.get<MorphRenderer>().render(morphShader, viewProjection, player.get<Transform>(), view, viewProjection);
+				if (!isGameFinished)
+				{
+					shadowBuffer->BindDepthAsTexture(30);
+					player.get<MorphRenderer>().render(morphShader, viewProjection, player.get<Transform>(), view, viewProjection);
+				}
 
 				if (!playerControlLock)
 					PlayerInput(player, time.DeltaTime, speed, playerBody);
@@ -11848,7 +12035,9 @@ int main() {
 				//Player Walking
 				if (glfwGetKey(BackendHandler::window, GLFW_KEY_W) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(BackendHandler::window, GLFW_KEY_D) == GLFW_PRESS)
 				{
+					footsteps.SetParameter("WalkType", 1);
 					footsteps.Play();
+					
 				}
 				else
 				{
@@ -11876,7 +12065,7 @@ int main() {
 				scene3Effects[6]->ApplyEffect(scene3Effects[activeEffect]);
 				
 
-				scene3Effects[activeEffect]->DrawToScreen();
+				scene3Effects[6]->DrawToScreen();
 
 			}
 

@@ -36,6 +36,8 @@ uniform sampler2D s_Diffuse2;
 uniform sampler2D s_Specular;
 uniform sampler2D s_Emissive;
 
+uniform vec3 u_RimColor;
+uniform bool u_RimEffect;
 
 uniform bool u_LightToggle;
 uniform bool u_AmbientToggle;
@@ -132,6 +134,15 @@ void main() {
 	//Emissive
 	vec3 emissive = texture(s_Emissive, inUV).rgb;
 
+	//Rim Lighting
+	float rimIntensity = 1.0 - max(dot(viewDir, N), 0.0);
+
+	rimIntensity = max(0.0, rimIntensity);
+
+	vec4 rimLight = vec4(rimIntensity * u_RimColor, 1.0);
+
+	//////
+
 	float shadow = ShadowCalculation(inFragPosLightSpace);
 
 	//Outline Effect             Thickness of Line
@@ -193,4 +204,9 @@ void main() {
 	result = result + emissive;
 
 	frag_color = vec4(result, textureColor.a);
+
+	if(u_RimEffect == true)
+	{
+		frag_color += rimLight;
+	}
 }
